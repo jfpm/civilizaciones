@@ -13,7 +13,7 @@
                         <br><br>
                         <label style="color: white;">Visitas:</label>
                         <br><br><br>
-                        <button class="boton-enlace"></button>
+                        <button class="boton-enlace">Adoraciones </button>
                     </center>
                 </div>
                 <div class="col-xs-12 col-sm-4 my-div-2">
@@ -23,7 +23,7 @@
                         <br><br>
                         <label style="color: white;">Visitas:</label>
                         <br><br><br>
-                        <button class="boton-enlace"></button>
+                        <button class="boton-enlace">Curiosidades</button>
                     </center>
                 </div>
                 <div class="col-xs-12 col-sm-4 my-div-3">
@@ -33,7 +33,7 @@
                         <br><br>
                         <label style="color: white;">Visitas:</label>
                         <br><br><br>
-                        <button class="boton-enlace"></button>
+                        <button class="boton-enlace">Cultura General</button>
                     </center>
                 </div>
             </div>
@@ -81,8 +81,16 @@
         border: none;
         border-radius: 7%;
         background-color: #e3e8eeb2;
-        padding: 30px 90px;
+        padding: 20px 70px;
         font-size: 16px;
         cursor: pointer; 
+    }
+
+    .row {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
     }
 </style>    
