@@ -1,33 +1,36 @@
 <x-app-layout>
-  
-    <script>
-        // Creamos la escena, la cámara y el renderizador
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
 
-        // Creamos un cubo
-        var geometry = new THREE.BoxGeometry();
-        var material = new THREE.MeshBasicMaterial({
-            color: 0x00ff00
-        });
-        var cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        // Posicionamos la cámara
-        camera.position.z = 5;
-
-        // Animamos la escena
-        function animate() {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-
-        animate();
-    </script>
+    <div class="sketchfab-embed-wrapper"> <iframe
+            src="https://sketchfab.com/models/6e482573475e4771808b75bfc1f84ffa/embed"
+            title="Casa egipcia"
+            frameborder="0"
+            allowfullscreen
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            xr-spatial-tracking
+            execution-while-out-of-viewport
+            execution-while-not-rendered
+            web-share
+            width="100%"
+            height="550"
+        > </iframe>
+        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                href="https://sketchfab.com/3d-models/casa-egipcia-6e482573475e4771808b75bfc1f84ffa?utm_medium=embed&utm_campaign=share-popup&utm_content=6e482573475e4771808b75bfc1f84ffa"
+                style="font-weight: bold; color: #1CAAD9;"
+                target="_blank"
+                rel="nofollow"
+            > Casa egipcia </a> by <a
+                href="https://sketchfab.com/lauraG?utm_medium=embed&utm_campaign=share-popup&utm_content=6e482573475e4771808b75bfc1f84ffa"
+                style="font-weight: bold; color: #1CAAD9;"
+                target="_blank"
+                rel="nofollow"
+            > Laura Gomez </a> on <a
+                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=6e482573475e4771808b75bfc1f84ffa"
+                style="font-weight: bold; color: #1CAAD9;"
+                target="_blank"
+                rel="nofollow"
+            >Sketchfab</a></p>
+    </div>
 
 </x-app-layout>

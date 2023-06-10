@@ -9,9 +9,11 @@
                     <center>
                         <button class="round-button"></button>
                         <br><br>
-                        <label style="color: white;">Visitas:</label>
+                        <label style="color: white;">Visitas: 0</label>
                         <br><br><br>
-                        <button class="boton-enlace" title="Ingresar al Modulo">Adoraciones</button>
+                        <form method="GET" action="{{ route('adoraciones_divinas') }}">                           
+                            <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Adoraciones</button>
+                        </form>
                         <br><br>
                         <button onclick="openModal('modal1')" style="color: white;">Ver Más</button>
                     </center>
@@ -21,9 +23,11 @@
                     <center>
                         <button class="round-button"></button>
                         <br><br>
-                        <label style="color: white;">Visitas:</label>
+                        <label style="color: white;">Visitas: 0</label>
                         <br><br><br>
-                        <button class="boton-enlace" title="Ingresar al Modulo">Curiosidades</button>
+                        <form method="GET" action="{{ route('curiosidades') }}">                                                    
+                            <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Curiosidades</button>
+                        </form>
                         <br><br>
                         <button onclick="openModal('modal2')" style="color: white;">Ver Más</button>
                     </center>
@@ -33,10 +37,12 @@
                     <center>
                         <button class="round-button"></button>
                         <br><br>
-                        <label style="color: white;">Visitas:</label>
+                        <label style="color: white;">Visitas: 0</label>
                         <br><br><br>
-                        <button class="boton-enlace" title="Ingresar al Modulo">Cultura General</button>
-                        <br><br>
+                        <form method="GET" action="{{ route('cultura') }}">                          
+                            <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Cultura General</button>
+                        </form>
+                        <br>
                         <button onclick="openModal('modal3')" style="color: white;">Ver Más</button>
                     </center>
                 </div>
@@ -56,7 +62,9 @@
             </p>
             <br>
             <center>
-                <button class="round-button">Ingreasr a Modulo</button>
+                <form method="GET" action="{{ route('adoraciones_divinas') }}">                           
+                    <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Adoraciones</button>
+                </form>
             </center>
         </div>
     </div>
@@ -79,7 +87,9 @@
             </p>
             <br>
             <center>
-                <button class="round-button">Ingreasr a Modulo</button>
+                <form method="GET" action="{{ route('curiosidades') }}">                                                    
+                    <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Curiosidades</button>
+                </form>
             </center>
         </div>
     </div>
@@ -95,7 +105,9 @@
             </p>
             <br>
             <center>
-                <button class="round-button">Ingreasr a Modulo</button>
+                <form method="GET" action="{{ route('adoraciones_divinas') }}">                           
+                    <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Adoraciones</button>
+                </form>
             </center>
         </div>
     </div>
