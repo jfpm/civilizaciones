@@ -1,44 +1,14 @@
 
 <x-app-layout>
-    <div class="py-12" style="background-image: url('/img/fondo_principal.jpg'); background-position: center top; background-repeat: no-repeat; background-size: cover; height:700px">    
-        <center><h1 style="color: white;">CIVILIZACIONES EGIPCIAS</h1></center><br>
-        <center><h2 style="color: white;">Distribución de Modulos del Sistema</h2></center>
-        <br><br><br>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 my-div">
-                    <br><br>
-                    <center>
-                        <button class="round-button"></button>
-                        <br><br>
-                        <label style="color: white;">Visitas:</label>
-                        <br><br><br>
-                        <button class="boton-enlace">Adoraciones </button>
-                    </center>
-                </div>
-                <div class="col-xs-12 col-sm-4 my-div-2">
-                    <br><br>
-                    <center>
-                        <button class="round-button"></button>
-                        <br><br>
-                        <label style="color: white;">Visitas:</label>
-                        <br><br><br>
-                        <button class="boton-enlace">Curiosidades</button>
-                    </center>
-                </div>
-                <div class="col-xs-12 col-sm-4 my-div-3">
-                    <br><br>
-                    <center>
-                        <button class="round-button"></button>
-                        <br><br>
-                        <label style="color: white;">Visitas:</label>
-                        <br><br><br>
-                        <button class="boton-enlace">Cultura General</button>
-                    </center>
-                </div>
-            </div>
+    
+    <div class="container">
+        <div class="card-container">
+            <div class="card">Tarjeta 1</div>
+            <div class="card">Tarjeta 2</div>
+            <div class="card">Tarjeta 3</div>
         </div>
-    </div>
+    </div>      
+    
 </x-app-layout>
 <style>
     .my-div {
@@ -93,4 +63,26 @@
         padding: 10px;
         box-sizing: border-box;
     }
+
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    background-color: #e3e3e3;
+}
+
+
 </style>    
