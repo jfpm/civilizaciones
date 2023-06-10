@@ -53,7 +53,8 @@
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <center><h2>ADORACIONES DIVINAS</h2></center>
+            <center><h2 style="font-weight: bold;">BIENVENDIDOS AL MODULO 1</h2></center>
+            <center><h2 style="font-weight: bold;">ADORACIONES DIVINAS</h2></center>
             <br>
             <p style="text-align: center; font-style: italic;" >
                 La civilización egipcia tenía una fuerte tradición de adoración divina, y su religión era central en todos los aspectos de la vida egipcia. Los egipcios adoraban a una amplia variedad de dioses y diosas, cada uno con su propio dominio y propósito específico.
@@ -72,7 +73,8 @@
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <center><h2>CURIOSIDADES</h2></center>
+            <center><h2 style="font-weight: bold;">BIENVENDIDOS AL MODULO 2</h2></center>
+            <center><h2 style="font-weight: bold;">CURIOSIDADES</h2></center>
             <br>
             <p style="text-align: center; font-style: italic;" >
                 La civilización egipcia es una de las más fascinantes y misteriosas de la historia antigua. Aquí tienes un resumen de algunas curiosidades sobre esta antigua cultura:
@@ -97,7 +99,8 @@
     <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <center><h2>CULTURA</h2></center>
+            <center><h2 style="font-weight: bold;">BIENVENDIDOS AL MODULO 3</h2></center>
+            <center><h2 style="font-weight: bold;">CULTURA</h2></center>
             <br>
             <p style="text-align: center; font-style: italic;" >
                 La civilización egipcia, una de las más antiguas del mundo, se desarrolló a lo largo del valle del río Nilo en el noreste de África durante más de 3,000 años. Su cultura dejó un legado duradero en áreas como la arquitectura, la religión, el arte y la escritura.
@@ -198,6 +201,7 @@
         padding: 20px;
         border: 1px solid #888;
         width: 80%;
+        border-radius: 20px;
     }
 
     .close {
