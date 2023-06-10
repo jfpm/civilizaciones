@@ -105,8 +105,8 @@
             </p>
             <br>
             <center>
-                <form method="GET" action="{{ route('adoraciones_divinas') }}">                           
-                    <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Adoraciones</button>
+                <form method="GET" action="{{ route('cultura') }}">                           
+                    <button type="submit" class="boton-enlace" title="Ingresar al Modulo" >Cultura</button>
                 </form>
             </center>
         </div>
