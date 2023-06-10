@@ -11,7 +11,7 @@
                         <br><br>
                         <label style="color: white;">Visitas:</label>
                         <br><br><br>
-                        <button class="boton-enlace">Adoraciones</button>
+                        <button class="boton-enlace" title="Ingresar al Modulo">Adoraciones</button>
                         <br><br>
                         <button onclick="openModal('modal1')" style="color: white;">Ver Más</button>
                     </center>
@@ -23,7 +23,7 @@
                         <br><br>
                         <label style="color: white;">Visitas:</label>
                         <br><br><br>
-                        <button class="boton-enlace">Curiosidades</button>
+                        <button class="boton-enlace" title="Ingresar al Modulo">Curiosidades</button>
                         <br><br>
                         <button onclick="openModal('modal2')" style="color: white;">Ver Más</button>
                     </center>
@@ -35,7 +35,7 @@
                         <br><br>
                         <label style="color: white;">Visitas:</label>
                         <br><br><br>
-                        <button class="boton-enlace">Cultura General</button>
+                        <button class="boton-enlace" title="Ingresar al Modulo">Cultura General</button>
                         <br><br>
                         <button onclick="openModal('modal3')" style="color: white;">Ver Más</button>
                     </center>
