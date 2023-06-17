@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/adoraciones_divinas', [DashboardController::class, 'adoraciones_divinas'])->name('adoraciones_divinas');
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
     Route::get('/cultura', [DashboardController::class, 'cultura'])->name('cultura');
+    Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
 
 });
 

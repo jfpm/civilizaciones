@@ -40,4 +40,16 @@ class DashboardController extends Controller
     {
         return view('cultura');
     }
+
+
+    /**
+     * Funcion que retorna la vista para ver el contenido de cultura
+     * @author Jhon Freddy Popo Moreno <jhon.popo@correounivalle.edu.co>
+     * @param  
+     * @return cultura
+     */
+    public function terminos()
+    {
+        return view('terminos');
+    }
 }
