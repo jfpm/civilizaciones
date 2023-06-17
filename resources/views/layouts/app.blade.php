@@ -38,6 +38,11 @@
             <main>
                 {{ $slot }}
             </main>
+            <footer class="bg-gray-800 text-white py-4">
+                <div class="container mx-auto text-center">
+                  <p><a href="{{ route('terminos') }}" title="Ver termínos y datos personales">&copy; 2023 {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</a></p>
+                </div>
+            </footer>
         </div>
 
         
