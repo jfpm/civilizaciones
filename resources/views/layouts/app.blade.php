@@ -33,7 +33,7 @@
         }
 
         footer {
-            position: fixed;
+            /* position: fixed; */
             bottom: 0;
             left: 0;
             right: 0;
@@ -93,11 +93,11 @@
         @endif
 
         <!-- Page Content -->
-        <main class="content">
+        <main class="content mb-4">
             {{ $slot }}
         </main>
         <footer>
-            <div class="container mx-auto text-center">
+            <div class="container mx-auto text-center mt-3">
                 <p><a href="{{ route('terminos') }}" title="Ver términos y datos personales">&copy; 2023
                         {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</a></p>
             </div>
