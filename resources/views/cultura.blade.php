@@ -1,36 +1,46 @@
 <x-app-layout>
+    <div class="container mx-auto">
+        <div class="flex flex-col">
+            <div class="border-l-2 border-gray-300">
+                @php
+                    $isLeft = true;
+                @endphp
+                @foreach ($events as $event)
+                    <div
+                        class="py-4 pl-4 pr-6 border-l-2 border-gray-300 flex flex-wrap @if ($isLeft) flex-row @else flex-row-reverse @endif">
+                        <div class="w-full md:w-1/2 pr-2">
+                            <div class="text-gray-600">{{ $event['date'] }}</div>
+                            <div class="mt-2 text-xl font-semibold">{{ $event['title'] }}</div>
+                            <div class="mt-1 text-gray-800">{{ $event['description'] }}</div>
+                        </div>
+                        <div class="w-full md:w-1/2 pl-2">
+                            @if (isset($event['photo']))
+                                <div class="mt-4">
+                                    <img src="{{ $event['photo'] }}" alt="{{ $event['title'] }}" class="max-w-full">
+                                </div>
+                            @endif
 
-    <div class="sketchfab-embed-wrapper"> <iframe
-            src="https://sketchfab.com/models/6e482573475e4771808b75bfc1f84ffa/embed"
-            title="Casa egipcia"
-            frameborder="0"
-            allowfullscreen
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            xr-spatial-tracking
-            execution-while-out-of-viewport
-            execution-while-not-rendered
-            web-share
-            width="100%"
-            height="550"
-        > </iframe>
-        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                href="https://sketchfab.com/3d-models/casa-egipcia-6e482573475e4771808b75bfc1f84ffa?utm_medium=embed&utm_campaign=share-popup&utm_content=6e482573475e4771808b75bfc1f84ffa"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            > Casa egipcia </a> by <a
-                href="https://sketchfab.com/lauraG?utm_medium=embed&utm_campaign=share-popup&utm_content=6e482573475e4771808b75bfc1f84ffa"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            > Laura Gomez </a> on <a
-                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=6e482573475e4771808b75bfc1f84ffa"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            >Sketchfab</a></p>
+                            @if (isset($event['video']))
+                                <div class="mt-4">
+                                    <video controls class="max-w-full">
+                                        <source src="{{ $event['video'] }}" type="video/mp4">
+                                    </video>
+                                </div>
+                            @endif
+
+                            @if (isset($event['iframe']))
+                                <div class="mt-4">
+                                    {!! $event['iframe'] !!}
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                    @php
+                        $isLeft = !$isLeft;
+                    @endphp
+                @endforeach
+            </div>
+        </div>
     </div>
 
 </x-app-layout>
