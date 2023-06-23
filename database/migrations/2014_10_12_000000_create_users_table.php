@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->double('state')->default(false);
             $table->string('username')->unique();
+            $table->integer('rol');
             $table->rememberToken();
             $table->timestamps();
         });
