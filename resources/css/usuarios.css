@@ -1,0 +1,10 @@
+.link-group {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.link-group a {
+    display: inline-block;
+    margin-right: 5px;
+}

@@ -11,9 +11,11 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+    <!--datatables -->
+    <!--CSS DataTables-->
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js','resources/css/usuarios.css'])
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Egyptian&display=swap');
@@ -33,7 +35,7 @@
         }
 
         footer {
-            /* position: fixed; */
+            position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
@@ -85,24 +87,25 @@
 
         <!-- Page Heading -->
         @if (isset($header))
-            <header class="bg-white dark:bg-gray-800 shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
+        <header class="bg-white dark:bg-gray-800 shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                {{ $header }}
+            </div>
+        </header>
         @endif
 
         <!-- Page Content -->
         <main class="content mb-4">
             {{ $slot }}
         </main>
-        <footer>
-            <div class="container mx-auto text-center mt-3">
-                <p><a href="{{ route('terminos') }}" title="Ver términos y datos personales">&copy; 2023
-                        {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</a></p>
-            </div>
-        </footer>
+
     </div>
+    <footer>
+        <div class="container mx-auto text-center mt-3">
+            <p><a href="{{ route('terminos') }}" title="Ver términos y datos personales">&copy; 2023
+                    {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</a></p>
+        </div>
+    </footer>
 </body>
 
 </html>
