@@ -37,6 +37,15 @@ class TimeLineCuriosidades extends Model
                 'video' => 'https://www.youtube.com/embed/Hdnv-PSOjtE',
                 'iframe' => null
             ],
+            [
+                'date' => '2023-01-15',
+                'title' => 'Evento 1',
+                'description' => 'Descripción del evento 1.',
+                'photo' => 'https://pixabay.com/get/g2facff3d5ae47a1d3ea24386c0d97bc85f2ebbe3a23cfcaaadfac9d48eabdf0bd544fb4a28edb8c28b36c124e2a3f195b654e8b3783b6da55c8962de84728061_1280.jpg',
+                'video' => 'ruta-del-video.mp4',
+                'iframe' => '<iframe src="https://www.youtube.com/embed/XXXXXXXXXXX"></iframe>'
+            ],
+
             // Agrega más eventos si es necesario
         ];
 
