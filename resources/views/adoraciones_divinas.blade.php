@@ -16,15 +16,13 @@
                         <div class="w-full md:w-1/2 pl-2">
                             @if (isset($event['photo']))
                                 <div class="mt-4">
-                                    <img src="{{ $event['photo'] }}" alt="{{ $event['title'] }}" class="max-w-full">
+                                    <img src="{{ asset($event['photo']) }}" alt="{{ $event['title'] }}" class="max-w-full">
                                 </div>
-                            @endif
+                            @endif
 
                             @if (isset($event['video']))
                                 <div class="mt-4">
-                                    <video controls class="max-w-full">
-                                        <source src="{{ $event['video'] }}" type="video/mp4">
-                                    </video>
+                                    <iframe width="100%" height="480"  src="{{ htmlspecialchars($event['video']) }}" frameborder="0" allowfullscreen ></iframe>
                                 </div>
                             @endif
 
