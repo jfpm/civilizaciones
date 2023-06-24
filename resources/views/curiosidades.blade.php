@@ -14,21 +14,19 @@
                             <div class="mt-1 text-gray-800">{{ $event['description'] }}</div>
                         </div>
                         <div class="w-full md:w-1/2 pl-2">
-                            @if (isset($event['photo']))
+                            @if (isset($event['photo']) && $event['photo'] != null)
                                 <div class="mt-4">
-                                    <img src="{{ $event['photo'] }}" alt="{{ $event['title'] }}" class="max-w-full">
+                                    <img src="{{ asset($event['photo']) }}" alt="{{ $event['title'] }}" class="max-w-full">
+                                </div>
+                            @endif
+
+                            @if (isset($event['video']) && $event['video'] != null)
+                                <div class="mt-4">
+                                    <iframe width="100%" height="480"  src="{{ htmlspecialchars($event['video']) }}" frameborder="0" allowfullscreen ></iframe>
                                 </div>
                             @endif
 
-                            @if (isset($event['video']))
-                                <div class="mt-4">
-                                    <video controls class="max-w-full">
-                                        <source src="{{ $event['video'] }}" type="video/mp4">
-                                    </video>
-                                </div>
-                            @endif
-
-                            @if (isset($event['iframe']))
+                            @if (isset($event['iframe']) && $event['iframe'] != null)
                                 <div class="mt-4">
                                     {!! $event['iframe'] !!}
                                 </div>

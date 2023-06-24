@@ -27,23 +27,23 @@ class DatabaseSeeder extends Seeder
         Role::create([
             'id' => '1',
             'nombre_rol'  =>'Administrador',
-            'descripcion' => 'Administrador encargado de toda la gestion del sistema',            
+            'descripcion' => 'Administrador encargado de toda la gestion del sistema',
         ]);
-  
+
         Role::create([
             'id' => '2',
             'nombre_rol'  =>'Estandar',
-            'descripcion' =>'Usuario Comun del sistema',            
+            'descripcion' =>'Usuario Comun del sistema',
         ]);
         //Crear el Usuario Administrador en el sistema
-        $password = 'adminadmin123';
+        /* $password = 'adminadmin123';
 
         $user = User::create([
             'name' => 'Administrador',
             'email' => 'telloyilver@gmail.com',
             'password' => Hash::make($password),
             'username' => 'Admin',
-            'rol'      => 1, 
-        ]);
+            'rol'      => 1,
+        ]); */
     }
 }

@@ -15,7 +15,7 @@
     <!--CSS DataTables-->
     <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js','resources/css/usuarios.css'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/usuarios.css'])
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Egyptian&display=swap');
@@ -82,7 +82,7 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-200">
         @include('layouts.navigation')
 
         <!-- Page Heading -->
