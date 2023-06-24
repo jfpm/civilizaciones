@@ -39,4 +39,24 @@ Route::middleware('auth')->group(function () {
 Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
 
 
-require __DIR__.'/auth.php';
+Route::get('limpieza', function () {
+    //$php = Artisan::call('up');
+    $php  = Artisan::call('config:cache');
+    $php1 = Artisan::call('view:clear');
+    $php2 = Artisan::call('route:clear');
+    //$php3 = Artisan::call('migrate');
+    return Redirect::to('/');
+});
+
+Route::get('limpieza@db', function () {
+    //$php = Artisan::call('up');
+    $php  = Artisan::call('config:cache');
+    $php1 = Artisan::call('view:clear');
+    $php2 = Artisan::call('route:clear');
+    $php3 = Artisan::call('migrate');
+    $php4 = Artisan::call('seed');
+    return Redirect::to('/');
+});
+
+
+require __DIR__ . '/auth.php';
