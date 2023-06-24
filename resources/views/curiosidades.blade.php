@@ -22,7 +22,7 @@
 
                             @if (isset($event['video']))
                                 <div class="mt-4">
-                                    <iframe width="100%" height="480"  src="{{ htmlspecialchars($event['video']) }}" frameborder="0" allowfullscreen ></iframe>
+                                    <iframe width="400" height="460"  src="{{ htmlspecialchars($event['video']) }}" frameborder="0" allowfullscreen ></iframe>
                                 </div>
                             @endif
 
