@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TimeLineAdoraciones;
 use App\Models\TimeLineCultura;
+use App\Models\TimeLineCuriosidades;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -30,7 +31,7 @@ class DashboardController extends Controller
      */
     public function curiosidades()
     {
-        $events = TimeLineAdoraciones::showTimeLineAdoraciones();
+        $events = TimeLineCuriosidades::showTimeLineCuriosidades();
         return view('curiosidades', compact('events'));
     }
 

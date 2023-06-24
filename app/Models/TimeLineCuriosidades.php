@@ -17,7 +17,7 @@ class TimeLineCuriosidades extends Model
                 'title' => 'Evento 1',
                 'description' => 'Descripción del evento 1.',
                 'photo' => 'https://pixabay.com/get/gf549722fbddfe9eee0e93310402b573a4729aa7cdd90b30d865cca0ae104a16ceec2c219bef985ce48f447c3a489f8868dda28883be2d7d22fd65c8b290787dc_1280.jpg',
-                'video' => 'https://pixabay.com/es/videos/desierto-arena-egipto-cultura-131220/',
+                'video' => 'https://www.youtube.com/embed/HMRyk9TrlU4',
                 'iframe' => '<div class="sketchfab-embed-wrapper"> <iframe
                         src="https://sketchfab.com/models/f4beed52dc76434bb0ceffcf74b914e1/embed"
                         title="Composición Egipto"

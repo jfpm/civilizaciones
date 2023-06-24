@@ -22,9 +22,7 @@
 
                             @if (isset($event['video']))
                                 <div class="mt-4">
-                                    <video controls class="max-w-full">
-                                        <source src="{{ $event['video'] }}" type="video/mp4">
-                                    </video>
+                                    <iframe width="100%" height="480"  src="{{ htmlspecialchars($event['video']) }}" frameborder="0" allowfullscreen ></iframe>
                                 </div>
                             @endif
 
