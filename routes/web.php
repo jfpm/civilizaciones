@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
@@ -32,9 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/adoraciones_divinas', [DashboardController::class, 'adoraciones_divinas'])->name('adoraciones_divinas');
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
     Route::get('/cultura', [DashboardController::class, 'cultura'])->name('cultura');
-
+    Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
 });
 
+Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
 
 
 require __DIR__.'/auth.php';
