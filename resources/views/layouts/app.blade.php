@@ -82,6 +82,24 @@
             background-color: #837112ab;
             /* Código de color dorado claro */
         }
+
+        .breadcrumb {
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .breadcrumb .separator {
+            margin: 0 5px;
+            color: #666;
+        }
+        
+        .breadcrumb .current {
+            font-weight: bold;
+        }
     </style>
     @stack('styles') 
 </head>

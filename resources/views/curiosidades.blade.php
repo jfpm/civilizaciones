@@ -1,8 +1,15 @@
+
 <x-app-layout>
     @push('styles')
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        
     @endpush
     <x-slot name="header">
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="separator">/</span>
+            <a class="text-xl font-semibold leading-tight text-gray-800" href="/curiosidades">{{ __('Curiosidades') }}</a>
+        </div>
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
             {{ __('Laravel 9 Slider') }}
         </h2>
