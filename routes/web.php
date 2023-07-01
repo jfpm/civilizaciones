@@ -39,4 +39,43 @@ Route::middleware('auth')->group(function () {
 Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
 
 
-require __DIR__.'/auth.php';
+Route::get('limpieza', function () {
+    //$php = Artisan::call('up');
+    $php  = Artisan::call('config:cache');
+    $php1 = Artisan::call('view:clear');
+    $php2 = Artisan::call('route:clear');
+    //$php3 = Artisan::call('migrate');
+    return Redirect::to('/');
+});
+
+Route::get('3jecut4rbds_f@j@l@', function(){
+    //$php = Artisan::call('up');
+    $php   = Artisan::call('db:seed');
+    return redirect()->route('/');
+});
+
+//limpiar aplicacion por medio de crobs interno
+Route::get('cr34rcache', function(){
+    //$php = Artisan::call('up');
+    $php   = Artisan::call('config:cache');
+    $php1  = Artisan::call('view:cache');
+    return redirect()->route('/');
+});
+
+//limpiar aplicacion por medio de crobs interno
+Route::get('4ctu4l1z4r', function(){
+    $php   = Artisan::call('optimize:clear');
+    $php1  = Artisan::call('config:cache');
+    $php2  = Artisan::call('view:cache');
+    return redirect()->route('/');
+});
+
+Route::get('3jecut4rkey_f@j@l@', function(){
+    //$php = Artisan::call('up');
+    $php   = Artisan::call('key:generate');
+    return redirect()->route('/');
+});
+
+
+
+require __DIR__ . '/auth.php';
