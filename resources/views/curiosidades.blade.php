@@ -9,12 +9,14 @@
             <a href="/">Inicio</a>
             <span class="separator">/</span>
             <a class="text-xl font-semibold leading-tight text-gray-800" href="/curiosidades">{{ __('Curiosidades') }}</a>
-        </div>
+        </div>        
+    </x-slot>
+    <div class="mt-2">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
             {{ __('Laravel 9 Slider') }}
         </h2>
-    </x-slot>
-    <div class="swiper mySwiper">
+    </div>
+    <div class="swiper mySwiper mt-3">
     <div class="swiper-wrapper">
         @foreach ($events as $event)
             @if (isset($event['photo']) && $event['photo'] != null)
