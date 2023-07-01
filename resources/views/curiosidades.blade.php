@@ -1,44 +1,60 @@
+
 <x-app-layout>
-    <div class="container mx-auto">
-        <div class="flex flex-col">
-            <div class="border-l-2 border-gray-300">
-                @php
-                    $isLeft = true;
-                @endphp
-                @foreach ($events as $event)
-                    <div
-                        class="py-4 pl-4 pr-6 border-l-2 border-gray-300 flex flex-wrap @if ($isLeft) flex-row @else flex-row-reverse @endif">
-                        <div class="w-full md:w-1/2 pr-2">
-                            <div class="text-gray-600">{{ $event['date'] }}</div>
-                            <div class="mt-2 text-xl font-semibold">{{ $event['title'] }}</div>
-                            <div class="mt-1 text-gray-800">{{ $event['description'] }}</div>
-                        </div>
-                        <div class="w-full md:w-1/2 pl-2">
-                            @if (isset($event['photo']) && $event['photo'] != null)
-                                <div class="mt-4">
-                                    <img src="{{ asset($event['photo']) }}" alt="{{ $event['title'] }}" class="max-w-full">
-                                </div>
-                            @endif
-
-                            @if (isset($event['video']) && $event['video'] != null)
-                                <div class="mt-4">
-                                    <iframe width="100%" height="480"  src="{{ htmlspecialchars($event['video']) }}" frameborder="0" allowfullscreen ></iframe>
-                                </div>
-                            @endif
-
-                            @if (isset($event['iframe']) && $event['iframe'] != null)
-                                <div class="mt-4">
-                                    {!! $event['iframe'] !!}
-                                </div>
-                            @endif
-                        </div>
-                    </div>
-                    @php
-                        $isLeft = !$isLeft;
-                    @endphp
-                @endforeach
-            </div>
-        </div>
+    @push('styles')
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        
+    @endpush
+    <x-slot name="header">
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="separator">/</span>
+            <a class="text-xl font-semibold leading-tight text-gray-800" href="/curiosidades">{{ __('Curiosidades') }}</a>
+        </div>        
+    </x-slot>
+    <div class="mt-2">
+        <h2 class="text-xl font-semibold leading-tight text-gray-800">
+            {{ __('Laravel 9 Slider') }}
+        </h2>
     </div>
+    <div class="swiper mySwiper mt-3">
+    <div class="swiper-wrapper">
+        @foreach ($events as $event)
+            @if (isset($event['photo']) && $event['photo'] != null)
+                <div class="swiper-slide flex flex-row items-center">
+                    <div class="flex-grow">
+                        <h3>{{ $event['title'] }}</h3>
+                        <p>{{ $event['description'] }}</p>
+                    </div>
+                    <div>
+                        <img class="object-cover w-full h-96" src="{{ asset($event['photo']) }}" alt="{{ $event['title'] }}" />
+                    </div>
+                </div>
+            @endif
+        @endforeach
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
 
+    
+
+    @push('scripts')
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                cssMode: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                mousewheel: true,
+                keyboard: true,
+            });
+        </script>
+    @endpush
 </x-app-layout>
