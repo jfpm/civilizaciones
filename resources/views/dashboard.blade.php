@@ -12,7 +12,6 @@
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/gatos.jpg') }}"
                             alt="Miembro del equipo 1">
-                        <h3 class="text-white text-xl font-bold text-center">Visitas: 0</h3>
                         <form method="GET" action="{{ route('adoraciones_divinas') }}">
                             <button
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Adoraciones
@@ -24,8 +23,7 @@
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/nilo.jpg') }}"
-                            alt="Miembro del equipo 2">
-                        <h3 class="text-white text-xl font-bold text-center">Visitas: 2</h3>
+                            alt="Miembro del equipo 2">                        
                         <form method="GET" action="{{ route('curiosidades') }}">
                             <button
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Curiosidades
@@ -38,7 +36,6 @@
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/sarcofago.png') }}"
                             alt="Miembro del equipo 3">
-                        <h3 class="text-white text-xl font-bold text-center">Visitas: 3</h3>
                         <form method="GET" action="{{ route('cultura') }}">
                             <button
                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Cultura
