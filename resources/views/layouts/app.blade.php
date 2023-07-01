@@ -78,7 +78,7 @@
             font-size: 28px;
         }
     </style>
-
+    @stack('styles') 
 </head>
 
 <body class="font-sans antialiased">
@@ -106,6 +106,7 @@
                     {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</a></p>
         </div>
     </footer>
+    @stack('scripts')
 </body>
 
 </html>
