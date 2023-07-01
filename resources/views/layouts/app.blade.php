@@ -77,6 +77,11 @@
             cursor: pointer;
             font-size: 28px;
         }
+
+        .bg-gold-light {
+            background-color: #837112ab;
+            /* Código de color dorado claro */
+        }
     </style>
 
 </head>
@@ -87,11 +92,11 @@
 
         <!-- Page Heading -->
         @if (isset($header))
-        <header class="bg-white dark:bg-gray-800 shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header>
+            <header class="bg-white dark:bg-gray-800 shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
         @endif
 
         <!-- Page Content -->

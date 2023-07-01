@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="py-12"
-        style="background-image: url('/img/fondo_principal.jpg'); background-position: center top; background-repeat: no-repeat; background-size: cover; min-height: 700px">
+        style="background-image: url('/img/fondo_principal.jpg'); background-position: center top; background-repeat: no-repeat; background-size: cover; min-height: 100%">
         <div class="py-8">
             <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl sm:text-center">
@@ -12,39 +12,35 @@
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/gatos.jpg') }}"
                             alt="Miembro del equipo 1">
+                        <h3 class="text-white text-xl font-bold text-center">Adoraciones</h3>
                         <form method="GET" action="{{ route('adoraciones_divinas') }}">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Adoraciones
+                            class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Ingresar
                             </button>
                         </form>
-                        <p class="text-white mt-3 text-center text-xl"><a onclick="openModal('modal1')"
-                                href="#">Ver
-                                Más</a></p>
+                        <p class="font-serif-egyptian text-white">Explorar los fascinantes aspectos de los faraones, dioses y animales sagrados en la antigua civilización egipcia.</p>
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/nilo.jpg') }}"
-                            alt="Miembro del equipo 2">                        
+                            alt="Miembro del equipo 2">
+                        <h3 class="text-white text-xl font-bold text-center">Curiosidades</h3>
                         <form method="GET" action="{{ route('curiosidades') }}">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Curiosidades
+                                class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Ingresar
                             </button>
                         </form>
-                        <p class="text-white mt-3 text-center text-xl"><a onclick="openModal('modal2')" href="#">
-                                Ver Más</a>
-                        </p>
+                        <p class="font-serif-egyptian text-white">Sumergete en los fascinantes aspectos de la civilización egipcia que han cautivado a lo largo de los siglos.</p>
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/sarcofago.png') }}"
-                            alt="Miembro del equipo 3">
+                            alt="Miembro del equipo 3" onmouseover="openModal('modal3')">
+                        <h3 class="text-white text-xl font-bold text-center">Cultura</h3>
                         <form method="GET" action="{{ route('cultura') }}">
                             <button
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Cultura
-                                general
+                                class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Ingresar
                             </button>
-                        </form>
-                        <p class="text-white mt-3 text-center text-xl"><a onclick="openModal('modal3')" href="#">
-                                Ver Más</a>
-                        </p>
+                        </form> 
+                        <p class="font-serif-egyptian text-white">Aborda los diversos aspectos que conformaron la vida cotidiana de la antigua civilización egipcia.</p>
                     </div>
                     <!-- Agrega más miembros del equipo aquí -->
                 </div>
@@ -70,7 +66,7 @@
                 el río Nilo y los animales. Por lo tanto, se adoraba al sol como Ra y se consideraba que el Nilo era un
                 regalo divino para la fertilidad de la tierra. Además, ciertos animales eran sagrados y se les asociaba
                 con deidades específicas, como el buey Apis, relacionado con Ptah, el dios de la creación..</p>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            <button class="bg-gold-light hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded mt-4"
                 onclick="closeModal('modal1')">Cerrar</button>
         </div>
     </div>
@@ -84,7 +80,7 @@
                 1. Construcción de las pirámides: Las pirámides de Egipto son un testimonio asombroso de la habilidad arquitectónica de los antiguos egipcios. Aunque se desconoce exactamente cómo fueron construidas, se estima que se utilizaron bloques de piedra caliza y granito, transportados desde canteras distantes y levantados mediante rampas y sistemas de poleas. <br><br>
                 2. Importancia del Nilo: El río Nilo desempeñó un papel crucial en la civilización egipcia. Las inundaciones anuales del río dejaban una capa de limo fértil en las tierras circundantes, lo que permitía a los egipcios practicar la agricultura y cultivar cultivos abundantes.
             </p>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            <button class="bg-gold-light hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded mt-4"
                 onclick="closeModal('modal2')">Cerrar</button>
         </div>
     </div>
@@ -96,7 +92,7 @@
             <h2 class="text-lg font-bold mb-2">CULTURA</h2>
             <p>La civilización egipcia, una de las más antiguas del mundo, se desarrolló a lo largo del valle del río Nilo en el noreste de África durante más de 3,000 años. Su cultura dejó un legado duradero en áreas como la arquitectura, la religión, el arte y la escritura. <br><br>
                 La religión desempeñó un papel fundamental en la vida de los antiguos egipcios. Adoraban a numerosos dioses y diosas, y creían en la vida después de la muerte. Para asegurar una transición exitosa al más allá, los egipcios desarrollaron rituales y prácticas funerarias elaboradas, como la momificación, la construcción de tumbas y la colocación de objetos funerarios.</p>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            <button class="bg-gold-light hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded mt-4"
                 onclick="closeModal('modal3')">Cerrar</button>
         </div>
     </div>
