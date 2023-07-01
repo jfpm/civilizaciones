@@ -1,34 +1,58 @@
+
 <x-app-layout>
-    <div class="sketchfab-embed-wrapper"> <iframe
-            src="https://sketchfab.com/models/f4beed52dc76434bb0ceffcf74b914e1/embed"
-            title="Composición Egipto"
-            frameborder="0"
-            allowfullscreen
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            xr-spatial-tracking
-            execution-while-out-of-viewport
-            execution-while-not-rendered
-            web-share
-            width="100%"
-            height="480"
-        > </iframe>
-        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                href="https://sketchfab.com/3d-models/composicion-egipto-f4beed52dc76434bb0ceffcf74b914e1?utm_medium=embed&utm_campaign=share-popup&utm_content=f4beed52dc76434bb0ceffcf74b914e1"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            > Composición Egipto </a> by <a
-                href="https://sketchfab.com/egonzalez105?utm_medium=embed&utm_campaign=share-popup&utm_content=f4beed52dc76434bb0ceffcf74b914e1"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            > egonzalez105 </a> on <a
-                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=f4beed52dc76434bb0ceffcf74b914e1"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            >Sketchfab</a></p>
+    @push('styles')
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        
+    @endpush
+    <x-slot name="header">
+        <div class="breadcrumb">
+            <a href="/">Inicio</a>
+            <span class="separator">/</span>
+            <a class="text-xl font-semibold leading-tight text-gray-800" href="/curiosidades">{{ __('Curiosidades') }}</a>
+        </div>
+        <h2 class="text-xl font-semibold leading-tight text-gray-800">
+            {{ __('Laravel 9 Slider') }}
+        </h2>
+    </x-slot>
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        @foreach ($events as $event)
+            @if (isset($event['photo']) && $event['photo'] != null)
+                <div class="swiper-slide flex flex-row items-center">
+                    <div class="flex-grow">
+                        <h3>{{ $event['title'] }}</h3>
+                        <p>{{ $event['description'] }}</p>
+                    </div>
+                    <div>
+                        <img class="object-cover w-full h-96" src="{{ asset($event['photo']) }}" alt="{{ $event['title'] }}" />
+                    </div>
+                </div>
+            @endif
+        @endforeach
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+    
+
+    @push('scripts')
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                cssMode: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                mousewheel: true,
+                keyboard: true,
+            });
+        </script>
+    @endpush
 </x-app-layout>

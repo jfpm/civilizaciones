@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'state',
-        'username'
+        'username',
+        'rol'
     ];
 
     /**
@@ -43,4 +44,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    
+    //relacion uno a uno con rol
+    /**
+     * Relacion con los  datos que se tiene de User  
+     * con la tabla Roles
+     * 
+     * @author Yilver Julian Tello <yilver.tello@correounivalle.edu.co>
+     * @return Collection<DocumentType>
+     */
+    public function roles(){
+        return $this->hasOne(Role::class, 'id','rol');
+    }
+
 }

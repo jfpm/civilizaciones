@@ -1,34 +1,44 @@
 <x-app-layout>
-    <div class="sketchfab-embed-wrapper"> <iframe
-            src="https://sketchfab.com/models/a3978cbbd67a4606b877f129e4dbb8a9/embed"
-            title="Vaso canopo."
-            frameborder="0"
-            allowfullscreen
-            mozallowfullscreen="true"
-            webkitallowfullscreen="true"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            xr-spatial-tracking
-            execution-while-out-of-viewport
-            execution-while-not-rendered
-            web-share
-            width="640"
-            height="480"
-        > </iframe>
-        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                href="https://sketchfab.com/3d-models/vaso-canopo-a3978cbbd67a4606b877f129e4dbb8a9?utm_medium=embed&utm_campaign=share-popup&utm_content=a3978cbbd67a4606b877f129e4dbb8a9"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            > Vaso canopo. </a> by <a
-                href="https://sketchfab.com/Proyecto_Qubbet_el_Hawa?utm_medium=embed&utm_campaign=share-popup&utm_content=a3978cbbd67a4606b877f129e4dbb8a9"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            > Proyecto Qubbet el-Hawa. Arqueología. Asuán Egipto </a> on <a
-                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a3978cbbd67a4606b877f129e4dbb8a9"
-                style="font-weight: bold; color: #1CAAD9;"
-                target="_blank"
-                rel="nofollow"
-            >Sketchfab</a></p>
+    <div class="container mx-auto">
+        <div class="flex flex-col">
+            <div class="border-l-2 border-gray-300">
+                @php
+                    $isLeft = true;
+                @endphp
+                @foreach ($events as $event)
+                    <div
+                        class="py-4 pl-4 pr-6 border-l-2 border-gray-300 flex flex-wrap @if ($isLeft) flex-row @else flex-row-reverse @endif">
+                        <div class="w-full md:w-1/2 pr-2">
+                            <div class="text-gray-600">{{ $event['date'] }}</div>
+                            <div class="mt-2 text-xl font-semibold">{{ $event['title'] }}</div>
+                            <div class="mt-1 text-gray-800">{{ $event['description'] }}</div>
+                        </div>
+                        <div class="w-full md:w-1/2 pl-2">
+                            @if (isset($event['photo']))
+                                <div class="mt-4">
+                                    <img src="{{ asset($event['photo']) }}" alt="{{ $event['title'] }}" class="max-w-full">
+                                </div>
+                            @endif
+
+                            @if (isset($event['video']))
+                                <div class="mt-4">
+                                    <iframe width="100%" height="480"  src="{{ htmlspecialchars($event['video']) }}" frameborder="0" allowfullscreen ></iframe>
+                                </div>
+                            @endif
+
+                            @if (isset($event['iframe']))
+                                <div class="mt-4">
+                                    {!! $event['iframe'] !!}
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                    @php
+                        $isLeft = !$isLeft;
+                    @endphp
+                @endforeach
+            </div>
+        </div>
     </div>
+
 </x-app-layout>
