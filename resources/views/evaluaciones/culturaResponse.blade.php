@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="breadcrumb">
-            <a href="/">Inicio</a>
+            <a href="dashboard">Inicio</a>
             <span class="separator">/</span>
             <a class="text-xl font-semibold leading-tight text-gray-800"
                 href="/evaluacion_cultura">{{ __('Evaluacuón cultural') }}</a>

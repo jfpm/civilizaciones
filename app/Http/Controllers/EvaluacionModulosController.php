@@ -9,6 +9,7 @@ use App\Models\Respuestas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\EvaluacionCuriosidades;
+use App\Models\PreguntaAbierta;
 use Illuminate\Support\Facades\Redirect;
 
 class EvaluacionModulosController extends Controller
@@ -22,9 +23,10 @@ class EvaluacionModulosController extends Controller
      * @param
      * @return curiosidades
      */
-    public function evaluacion_curiosidad(){
+    public function evaluacion_curiosidad()
+    {
         //traer las preguntas del modulo curiosidades
-        $questions = Preguntas::where('p_tipo','Curiosidades')->get();
+        $questions = Preguntas::where('p_tipo', 'Curiosidades')->get();
         return view('evaluaciones.curiosidadesResponse', compact('questions'));
     }
 
@@ -35,7 +37,8 @@ class EvaluacionModulosController extends Controller
      * @param  $data
      * @return curiosidades
      */
-    public function storeCuriosidad(Request $request){
+    public function storeCuriosidad(Request $request)
+    {
         //dd($request['response']);
 
         /*  crear metodo para recorrer los id que llegaron del formulario y sacar con el id
@@ -55,9 +58,18 @@ class EvaluacionModulosController extends Controller
                 'ec_user' => Auth::user()->id
             ]);
         }
-        //colocar mensaje a retornar al contestar en vista principal
-        return Redirect::to('dashboard');
 
+        //almacenar respuesta abierta
+        PreguntaAbierta::create([
+            'pa_pregunta' => 'Reflexión modulo curiosidades',
+            'pa_respuesta' => $request['answeropen'],
+            'pa_modulo' => 'Curiosidades',
+            'pa_user' => Auth::user()->id
+        ]);
+
+        //colocar mensaje a retornar al contestar en vista principal
+        return Redirect::route('dashboard')->with('status', 'Excelente has dado un paso mas en Civilización Egipcia, al responder Curiosidades.');
+        return Redirect::to('dashboard');
     }
 
     /**
@@ -67,9 +79,10 @@ class EvaluacionModulosController extends Controller
      * @param
      * @return curiosidades
      */
-    public function evaluacion_cultura(){
+    public function evaluacion_cultura()
+    {
         //traer las preguntas del modulo curiosidades
-        $questions = Preguntas::where('p_tipo','Culturales')->get();
+        $questions = Preguntas::where('p_tipo', 'Culturales')->get();
         return view('evaluaciones.culturaResponse', compact('questions'));
     }
 
@@ -80,7 +93,8 @@ class EvaluacionModulosController extends Controller
      * @param  $data
      * @return cultura
      */
-    public function storeCultura(Request $request){
+    public function storeCultura(Request $request)
+    {
         //dd($request['response']);
 
         /*  crear metodo para recorrer los id que llegaron del formulario y sacar con el id
@@ -102,7 +116,6 @@ class EvaluacionModulosController extends Controller
         }
         //colocar mensaje a retornar al contestar en vista principal
         return Redirect::to('dashboard');
-
     }
 
     /**
@@ -112,9 +125,10 @@ class EvaluacionModulosController extends Controller
      * @param
      * @return curiosidades
      */
-    public function evaluacion_adoraciones(){
+    public function evaluacion_adoraciones()
+    {
         //traer las preguntas del modulo curiosidades
-        $questions = Preguntas::where('p_tipo','Adoraciones')->get();
+        $questions = Preguntas::where('p_tipo', 'Adoraciones')->get();
         return view('evaluaciones.adoracionesResponse', compact('questions'));
     }
 
@@ -125,7 +139,8 @@ class EvaluacionModulosController extends Controller
      * @param  $data
      * @return cultura
      */
-    public function storeAdoraciones(Request $request){
+    public function storeAdoraciones(Request $request)
+    {
         //dd($request['response']);
 
         /*  crear metodo para recorrer los id que llegaron del formulario y sacar con el id
@@ -148,7 +163,5 @@ class EvaluacionModulosController extends Controller
 
         //colocar mensaje a retornar al contestar en vista principal
         return Redirect::to('dashboard');
-
     }
-
 }
