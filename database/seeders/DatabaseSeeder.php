@@ -24,7 +24,9 @@ class DatabaseSeeder extends Seeder
         //se llama a la funcion que crea los roles
         //$this->call(RolSeeder::class);
         //$this->call(UserSeeder::class);
-        $this->call(Curiosidades_p_r_Seeder::class);
+        //$this->call(Curiosidades_p_r_Seeder::class);
+        $this->call(Culturales_p_r_Seeder::class);
+        $this->call(Adoraciones_p_r_Seeder::class);
 
 
     }

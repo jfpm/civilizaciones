@@ -21,9 +21,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,6 +36,11 @@ Route::middleware('auth')->group(function () {
 
     //evaluaciones
     Route::get('/evaluacion_curiosidad', [EvaluacionModulosController::class, 'evaluacion_curiosidad'])->name('evaluacion_curiosidad');
+    Route::post('/storeCuriosidad', [EvaluacionModulosController::class, 'storeCuriosidad'])->name('storeCuriosidad');
+    Route::get('/evaluacion_cultura', [EvaluacionModulosController::class, 'evaluacion_cultura'])->name('evaluacion_cultura');
+    Route::post('/storeCultura', [EvaluacionModulosController::class, 'storeCultura'])->name('storeCultura');
+    Route::get('/evaluacion_adoraciones', [EvaluacionModulosController::class, 'evaluacion_adoraciones'])->name('evaluacion_adoraciones');
+    Route::post('/storeAdoraciones', [EvaluacionModulosController::class, 'storeAdoraciones'])->name('storeAdoraciones');
 
 });
 

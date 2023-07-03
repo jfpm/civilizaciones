@@ -19,6 +19,11 @@
                             </button>
                         </form>
                         <p class="font-serif-egyptian text-white">Explorar los fascinantes aspectos de los faraones, dioses y animales sagrados en la antigua civilización egipcia.</p>
+                        @if(!$showAdoracion)
+                        <a href="evaluacion_adoraciones" class="underline text-white">
+                            <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                        </a>
+                        @endif
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/nilo.jpg') }}"
@@ -26,9 +31,11 @@
                         <h3 class="text-white text-xl font-bold text-center">Curiosidades</h3>
                         <a href="{{ route('curiosidades') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block text-center">Ingresar</a>
                         <p class="font-serif-egyptian text-white">Sumergete en los fascinantes aspectos de la civilización egipcia que han cautivado a lo largo de los siglos.</p>
+                        @if(!$showCuriosidad)
                         <a href="evaluacion_curiosidad" class="underline text-white">
                             <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
                         </a>
+                        @endif
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/sarcofago.png') }}"
@@ -40,6 +47,11 @@
                             </button>
                         </form>
                         <p class="font-serif-egyptian text-white">Aborda los diversos aspectos que conformaron la vida cotidiana de la antigua civilización egipcia.</p>
+                        @if(!$showCultura)
+                        <a href="evaluacion_cultura" class="underline text-white">
+                            <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                        </a>
+                        @endif
                     </div>
                     <!-- Agrega más miembros del equipo aquí -->
                 </div>

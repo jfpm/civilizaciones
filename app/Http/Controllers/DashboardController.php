@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Configurations;
 use App\Models\TimeLineAdoraciones;
 use App\Models\TimeLineCultura;
 use App\Models\TimeLineCuriosidades;
@@ -9,6 +10,20 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+
+    /**
+     * Funcion que retorna la vista principal del sistema despues de logueado
+     * @author Jhon Freddy Popo Moreno <jhon.popo@correounivalle.edu.co>
+     * @param
+     * @return dashboard
+     */
+    public function index()
+    {
+        $showCuriosidad = Configurations::validateSurvey("Curiosidades");
+        $showAdoracion = Configurations::validateSurvey("Adoraciones");
+        $showCultura = Configurations::validateSurvey("Culturales");
+        return view('dashboard', compact('showCuriosidad','showAdoracion','showCultura'));
+    }
 
     /**
      * Funcion que retorna la vista para ver el contenido de adoraciones divinas

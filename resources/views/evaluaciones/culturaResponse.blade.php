@@ -4,7 +4,7 @@
             <a href="/">Inicio</a>
             <span class="separator">/</span>
             <a class="text-xl font-semibold leading-tight text-gray-800"
-                href="/evaluacion_curiosidad">{{ __('Evaluacuón curiosidades') }}</a>
+                href="/evaluacion_cultura">{{ __('Evaluacuón cultural') }}</a>
         </div>
     </x-slot>
     <div class="container mx-auto mt-3">
@@ -12,7 +12,7 @@
             <div class="p-4 mb-5 py-5">
                 <div class="overflow-x-auto">
 
-                    <form method="POST" action="{{ route('storeCuriosidad') }}">
+                    <form method="POST" action="{{ route('storeCultura') }}">
                         @csrf
                         @foreach ($questions as $question)
                             <!-- Campo de texto -->
