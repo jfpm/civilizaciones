@@ -6,7 +6,7 @@
     @endpush
     <x-slot name="header">
         <div class="breadcrumb">
-            <a href="/">Inicio</a>
+            <a href="dashboard">Inicio</a>
             <span class="separator">/</span>
             <a class="text-xl font-semibold leading-tight text-gray-800" href="/curiosidades">{{ __('Curiosidades') }}</a>
         </div>        

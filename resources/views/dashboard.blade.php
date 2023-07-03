@@ -13,11 +13,7 @@
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/gatos.jpg') }}"
                             alt="Miembro del equipo 1">
                         <h3 class="text-white text-xl font-bold text-center">Adoraciones</h3>
-                        <form method="GET" action="{{ route('adoraciones_divinas') }}">
-                            <button
-                            class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Ingresar
-                            </button>
-                        </form>
+                        <a href="{{ route('adoraciones_divinas') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
                         <p class="font-serif-egyptian text-white">Explorar los fascinantes aspectos de los faraones, dioses y animales sagrados en la antigua civilización egipcia.</p>
                         @if(!$showAdoracion)
                         <a href="evaluacion_adoraciones" class="underline text-white">
@@ -29,7 +25,7 @@
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/nilo.jpg') }}"
                             alt="Miembro del equipo 2">
                         <h3 class="text-white text-xl font-bold text-center">Curiosidades</h3>
-                        <a href="{{ route('curiosidades') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block text-center">Ingresar</a>
+                        <a href="{{ route('curiosidades') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
                         <p class="font-serif-egyptian text-white">Sumergete en los fascinantes aspectos de la civilización egipcia que han cautivado a lo largo de los siglos.</p>
                         @if(!$showCuriosidad)
                         <a href="evaluacion_curiosidad" class="underline text-white">
@@ -41,12 +37,8 @@
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/sarcofago.png') }}"
                             alt="Miembro del equipo 3" onmouseover="openModal('modal3')">
                         <h3 class="text-white text-xl font-bold text-center">Cultura</h3>
-                        <form method="GET" action="{{ route('cultura') }}">
-                            <button
-                                class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Ingresar
-                            </button>
-                        </form>
-                        <p class="font-serif-egyptian text-white">Aborda los diversos aspectos que conformaron la vida cotidiana de la antigua civilización egipcia.</p>
+                        <a href="{{ route('cultura') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
+                        <p class="font-serif-egyptian text-white mb-5">Aborda los diversos aspectos que conformaron la vida cotidiana de la antigua civilización egipcia.</p>
                         @if(!$showCultura)
                         <a href="evaluacion_cultura" class="underline text-white">
                             <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>

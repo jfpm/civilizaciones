@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="breadcrumb">
-            <a href="/">Inicio</a>
+            <a href="dashboard">Inicio</a>
             <span class="separator">/</span>
             <a class="text-xl font-semibold leading-tight text-gray-800"
                 href="/evaluacion_curiosidad">{{ __('Evaluacuón curiosidades') }}</a>
@@ -28,6 +28,12 @@
                                 @endif
                             </div>
                         @endforeach
+
+                        <div class="mb-4">
+                            <label for="answeropen" class="block mb-2">Dejanos tus comentarios sobre curiosidades:</label>
+                            <input type="text" name="answeropen" id="answeropen" class="border-gray-400 border rounded-md px-4 py-2 w-full">
+                        </div>
+
                         <!-- Botón de envío -->
                         <div>
                             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Enviar</button>
