@@ -24,12 +24,11 @@
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/nilo.jpg') }}"
                             alt="Miembro del equipo 2">
                         <h3 class="text-white text-xl font-bold text-center">Curiosidades</h3>
-                        <form method="GET" action="{{ route('curiosidades') }}">
-                            <button
-                                class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Ingresar
-                            </button>
-                        </form>
+                        <a href="{{ route('curiosidades') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block text-center">Ingresar</a>
                         <p class="font-serif-egyptian text-white">Sumergete en los fascinantes aspectos de la civilización egipcia que han cautivado a lo largo de los siglos.</p>
+                        <a href="evaluacion_curiosidad" class="underline text-white">
+                            <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                        </a>
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/sarcofago.png') }}"
@@ -39,7 +38,7 @@
                             <button
                                 class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-3 w-full block">Ingresar
                             </button>
-                        </form> 
+                        </form>
                         <p class="font-serif-egyptian text-white">Aborda los diversos aspectos que conformaron la vida cotidiana de la antigua civilización egipcia.</p>
                     </div>
                     <!-- Agrega más miembros del equipo aquí -->
@@ -76,7 +75,7 @@
             <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
             <!-- Contenido del modal -->
             <h2 class="text-lg font-bold mb-2">CURIOSIDADES</h2>
-            <p>La civilización egipcia es una de las más fascinantes y misteriosas de la historia antigua. Aquí tienes un resumen de algunas curiosidades sobre esta antigua cultura: <br><br>  
+            <p>La civilización egipcia es una de las más fascinantes y misteriosas de la historia antigua. Aquí tienes un resumen de algunas curiosidades sobre esta antigua cultura: <br><br>
                 1. Construcción de las pirámides: Las pirámides de Egipto son un testimonio asombroso de la habilidad arquitectónica de los antiguos egipcios. Aunque se desconoce exactamente cómo fueron construidas, se estima que se utilizaron bloques de piedra caliza y granito, transportados desde canteras distantes y levantados mediante rampas y sistemas de poleas. <br><br>
                 2. Importancia del Nilo: El río Nilo desempeñó un papel crucial en la civilización egipcia. Las inundaciones anuales del río dejaban una capa de limo fértil en las tierras circundantes, lo que permitía a los egipcios practicar la agricultura y cultivar cultivos abundantes.
             </p>

@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EvaluacionModulosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
     Route::get('/cultura', [DashboardController::class, 'cultura'])->name('cultura');
     Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
+
+    //evaluaciones
+    Route::get('/evaluacion_curiosidad', [EvaluacionModulosController::class, 'evaluacion_curiosidad'])->name('evaluacion_curiosidad');
+
 });
 
 Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
