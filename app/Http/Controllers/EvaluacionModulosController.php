@@ -32,4 +32,5 @@ class EvaluacionModulosController extends Controller
     public function storeCuriosidad(Request $request){
         dd($request->all());
     }
+
 }

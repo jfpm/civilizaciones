@@ -3,10 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Role;
-use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,6 +25,7 @@ class DatabaseSeeder extends Seeder
         //$this->call(RolSeeder::class);
         //$this->call(UserSeeder::class);
         $this->call(Curiosidades_p_r_Seeder::class);
+
 
     }
 }

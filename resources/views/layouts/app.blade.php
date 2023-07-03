@@ -86,22 +86,29 @@
         .breadcrumb {
             margin-bottom: 10px;
         }
-        
+
         .breadcrumb a {
             color: #333;
             text-decoration: none;
         }
-        
+
         .breadcrumb .separator {
             margin: 0 5px;
             color: #666;
         }
-        
+
         .breadcrumb .current {
             font-weight: bold;
         }
+
+        .table-wrapper {
+            width: 80%;
+            /* Ajusta el valor según tus necesidades */
+            margin: 0 auto;
+            /* Centra la tabla horizontalmente */
+        }
     </style>
-    @stack('styles') 
+    @stack('styles')
 </head>
 
 <body class="font-sans antialiased">
