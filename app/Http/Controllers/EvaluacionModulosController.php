@@ -68,6 +68,7 @@ class EvaluacionModulosController extends Controller
         ]);
 
         //colocar mensaje a retornar al contestar en vista principal
+        return Redirect::route('dashboard')->with('status', 'Excelente has dado un paso mas en Civilización Egipcia, al responder Curiosidades.');
         return Redirect::to('dashboard');
     }
 

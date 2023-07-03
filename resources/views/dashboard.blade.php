@@ -1,4 +1,7 @@
 <x-app-layout>
+    <!-- Session Status -->
+    <x-auth-session-status class="mb-4" :status="session('status')" />
+
     <div class="py-12"
         style="background-image: url('/img/fondo_principal.jpg'); background-position: center top; background-repeat: no-repeat; background-size: cover; min-height: 100%">
         <div class="py-8">
@@ -13,36 +16,42 @@
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/gatos.jpg') }}"
                             alt="Miembro del equipo 1">
                         <h3 class="text-white text-xl font-bold text-center">Adoraciones</h3>
-                        <a href="{{ route('adoraciones_divinas') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
-                        <p class="font-serif-egyptian text-white">Explorar los fascinantes aspectos de los faraones, dioses y animales sagrados en la antigua civilización egipcia.</p>
-                        @if(!$showAdoracion)
-                        <a href="evaluacion_adoraciones" class="underline text-white">
-                            <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
-                        </a>
+                        <a href="{{ route('adoraciones_divinas') }}"
+                            class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
+                        <p class="font-serif-egyptian text-white">Explorar los fascinantes aspectos de los faraones,
+                            dioses y animales sagrados en la antigua civilización egipcia.</p>
+                        @if (!$showAdoracion)
+                            <a href="evaluacion_adoraciones" class="underline text-white">
+                                <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                            </a>
                         @endif
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/nilo.jpg') }}"
                             alt="Miembro del equipo 2">
                         <h3 class="text-white text-xl font-bold text-center">Curiosidades</h3>
-                        <a href="{{ route('curiosidades') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
-                        <p class="font-serif-egyptian text-white">Sumergete en los fascinantes aspectos de la civilización egipcia que han cautivado a lo largo de los siglos.</p>
-                        @if(!$showCuriosidad)
-                        <a href="evaluacion_curiosidad" class="underline text-white">
-                            <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
-                        </a>
+                        <a href="{{ route('curiosidades') }}"
+                            class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
+                        <p class="font-serif-egyptian text-white">Sumergete en los fascinantes aspectos de la
+                            civilización egipcia que han cautivado a lo largo de los siglos.</p>
+                        @if (!$showCuriosidad)
+                            <a href="evaluacion_curiosidad" class="underline text-white">
+                                <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                            </a>
                         @endif
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/sarcofago.png') }}"
                             alt="Miembro del equipo 3" onmouseover="openModal('modal3')">
                         <h3 class="text-white text-xl font-bold text-center">Cultura</h3>
-                        <a href="{{ route('cultura') }}" class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
-                        <p class="font-serif-egyptian text-white mb-5">Aborda los diversos aspectos que conformaron la vida cotidiana de la antigua civilización egipcia.</p>
-                        @if(!$showCultura)
-                        <a href="evaluacion_cultura" class="underline text-white">
-                            <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
-                        </a>
+                        <a href="{{ route('cultura') }}"
+                            class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
+                        <p class="font-serif-egyptian text-white mb-5">Aborda los diversos aspectos que conformaron la
+                            vida cotidiana de la antigua civilización egipcia.</p>
+                        @if (!$showCultura)
+                            <a href="evaluacion_cultura" class="underline text-white">
+                                <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                            </a>
                         @endif
                     </div>
                     <!-- Agrega más miembros del equipo aquí -->
@@ -53,12 +62,14 @@
 
     <!-- Modales -->
     <!-- Modal -->
-    <div id="modal1" class="modal hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center overflow-auto">
+    <div id="modal1"
+        class="modal hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center overflow-auto">
         <div class="modal-content bg-white p-4 rounded-lg">
             <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
             <!-- Contenido del modal -->
             <h2 class="text-lg font-bold mb-2">ADORACIONES DIVINAS</h2>
-            <p class="font-serif-egyptian">La civilización egipcia tenía una fuerte tradición de adoración divina, y su religión era central en
+            <p class="font-serif-egyptian">La civilización egipcia tenía una fuerte tradición de adoración divina, y su
+                religión era central en
                 todos los aspectos de la vida egipcia. Los egipcios adoraban a una amplia variedad de dioses y diosas,
                 cada uno con su propio dominio y propósito específico.
                 El panteón egipcio estaba encabezado por dioses y diosas principales, como Ra, el dios del sol y la
@@ -79,9 +90,15 @@
             <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
             <!-- Contenido del modal -->
             <h2 class="text-lg font-bold mb-2">CURIOSIDADES</h2>
-            <p>La civilización egipcia es una de las más fascinantes y misteriosas de la historia antigua. Aquí tienes un resumen de algunas curiosidades sobre esta antigua cultura: <br><br>
-                1. Construcción de las pirámides: Las pirámides de Egipto son un testimonio asombroso de la habilidad arquitectónica de los antiguos egipcios. Aunque se desconoce exactamente cómo fueron construidas, se estima que se utilizaron bloques de piedra caliza y granito, transportados desde canteras distantes y levantados mediante rampas y sistemas de poleas. <br><br>
-                2. Importancia del Nilo: El río Nilo desempeñó un papel crucial en la civilización egipcia. Las inundaciones anuales del río dejaban una capa de limo fértil en las tierras circundantes, lo que permitía a los egipcios practicar la agricultura y cultivar cultivos abundantes.
+            <p>La civilización egipcia es una de las más fascinantes y misteriosas de la historia antigua. Aquí tienes
+                un resumen de algunas curiosidades sobre esta antigua cultura: <br><br>
+                1. Construcción de las pirámides: Las pirámides de Egipto son un testimonio asombroso de la habilidad
+                arquitectónica de los antiguos egipcios. Aunque se desconoce exactamente cómo fueron construidas, se
+                estima que se utilizaron bloques de piedra caliza y granito, transportados desde canteras distantes y
+                levantados mediante rampas y sistemas de poleas. <br><br>
+                2. Importancia del Nilo: El río Nilo desempeñó un papel crucial en la civilización egipcia. Las
+                inundaciones anuales del río dejaban una capa de limo fértil en las tierras circundantes, lo que
+                permitía a los egipcios practicar la agricultura y cultivar cultivos abundantes.
             </p>
             <button class="bg-gold-light hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded mt-4"
                 onclick="closeModal('modal2')">Cerrar</button>
@@ -93,8 +110,13 @@
             <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
             <!-- Contenido del modal -->
             <h2 class="text-lg font-bold mb-2">CULTURA</h2>
-            <p>La civilización egipcia, una de las más antiguas del mundo, se desarrolló a lo largo del valle del río Nilo en el noreste de África durante más de 3,000 años. Su cultura dejó un legado duradero en áreas como la arquitectura, la religión, el arte y la escritura. <br><br>
-                La religión desempeñó un papel fundamental en la vida de los antiguos egipcios. Adoraban a numerosos dioses y diosas, y creían en la vida después de la muerte. Para asegurar una transición exitosa al más allá, los egipcios desarrollaron rituales y prácticas funerarias elaboradas, como la momificación, la construcción de tumbas y la colocación de objetos funerarios.</p>
+            <p>La civilización egipcia, una de las más antiguas del mundo, se desarrolló a lo largo del valle del río
+                Nilo en el noreste de África durante más de 3,000 años. Su cultura dejó un legado duradero en áreas como
+                la arquitectura, la religión, el arte y la escritura. <br><br>
+                La religión desempeñó un papel fundamental en la vida de los antiguos egipcios. Adoraban a numerosos
+                dioses y diosas, y creían en la vida después de la muerte. Para asegurar una transición exitosa al más
+                allá, los egipcios desarrollaron rituales y prácticas funerarias elaboradas, como la momificación, la
+                construcción de tumbas y la colocación de objetos funerarios.</p>
             <button class="bg-gold-light hover:bg-yellow-600  text-white font-bold py-2 px-4 rounded mt-4"
                 onclick="closeModal('modal3')">Cerrar</button>
         </div>
