@@ -147,9 +147,9 @@ class Configurations extends Model
                 'im_color' => 'bg-blue',
                 'im_item' => 'Culto a Ra',
                 'im_descripcion' => 'Ra era el dios solar supremo y una de las deidades más importantes en el panteón egipcio. Se le representaba como un hombre con cabeza de halcón o como un disco solar. Ra era considerado el creador del universo y se le atribuía el ciclo diario del sol, donde viajaba por el cielo durante el día y descendía al inframundo por la noche.',
+                'im_frame' => '<iframe title="Estatua Dios Re-Horakhty - CAIXAFORUM´21" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="600" height="440" src="https://sketchfab.com/models/bfe1c197e39348d089c26cd09ca098c6/embed"> </iframe>',
                 'im_img' => '',
                 'im_video' => '',
-                'im_frame' => '<iframe title="Estatua Dios Re-Horakhty - CAIXAFORUM´21" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="600" height="440" src="https://sketchfab.com/models/bfe1c197e39348d089c26cd09ca098c6/embed"> </iframe>',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
             ]);

@@ -7,7 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -108,6 +110,14 @@
             margin: 0 auto;
             /* Centra la tabla horizontalmente */
         }
+
+        #goToTopButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
     </style>
     @stack('styles')
 </head>
@@ -139,5 +149,20 @@
     </footer>
     @stack('scripts')
 </body>
-
+<a id="goToTopButton" href="#" title="Ir hacia arriba" class="fixed bottom-4 right-4 text-white text-xl bg-blue-500 p-2 rounded-full" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></a>
 </html>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var goToTopButton = document.getElementById('goToTopButton');
+        if (window.scrollY > 100) {
+            goToTopButton.style.display = 'block';
+        } else {
+            goToTopButton.style.display = 'none';
+        }
+    });
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
