@@ -31,7 +31,8 @@
         }
 
         .content {
-            flex-grow: 1;
+            position: relative;
+            z-index: 0;
         }
 
         footer {
@@ -41,7 +42,7 @@
             right: 0;
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 0px;
             text-align: center;
         }
 

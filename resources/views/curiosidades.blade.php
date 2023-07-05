@@ -11,7 +11,7 @@
     </x-slot>
     <div class="mt-2">
         <div class="bg-white border border-gray-200 rounded-lg p-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-wrap">
                 @foreach ($itemsCuriosidades as $index => $event)
                     <div class="bg-white p-4 shadow-md">
                         <button
@@ -19,55 +19,39 @@
                             onclick="toggleInfo({{ $index }})">
                             {{ $event->im_item }}
                         </button>
-                        <div id="info{{ $index }}" style="display: none;">
-                            <!-- Contenido oculto -->
-                            <!-- Texto -->
-                            <p>{{ $event->texto }}</p>
-                            <!-- Imagen -->
-                            <img src="{{ $event->imagen }}" alt="Imagen">
-                            <!-- Video -->
-                            <video src="{{ $event->video }}" controls></video>
-                            <!-- Frame -->
-                            <iframe src="{{ $event->frame }}"></iframe>
-                        </div>
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
 
+    @foreach ($itemsCuriosidades as $index => $event)
+        <div id="info{{ $index }}" class="mt-4 hidden">
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h2 class="text-xl font-semibold leading-tight text-gray-800">{{ $event->im_item }}</h2>
+                <p>{{ $event->im_descripcion }}</p>
 
-
-
-
-
-    <div class="mt-2">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Laravel 9 Slider') }}
-        </h2>
-    </div>
-    <div class="swiper mySwiper mt-3">
-        <div class="swiper-wrapper">
-            @foreach ($events as $event)
-                @if (isset($event['photo']) && $event['photo'] != null)
-                    <div class="swiper-slide flex flex-row items-center">
-                        <div class="flex-grow">
-                            <h3>{{ $event['title'] }}</h3>
-                            <p>{{ $event['description'] }}</p>
-                        </div>
-                        <div>
-                            <img class="object-cover w-full h-96" src="{{ asset($event['photo']) }}"
-                                alt="{{ $event['title'] }}" />
-                        </div>
+                @if (isset($event->im_img))
+                    <div class="mt-4">
+                        <img src="{{ asset($event->im_img) }}" alt="{{ $event->im_item }}" class="max-w-full">
                     </div>
                 @endif
-            @endforeach
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>
 
+                @if (isset($event->im_video))
+                    <div class="mt-4">
+                        <iframe width="90%" height="250" src="{{ $event->im_video }}" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                @endif
+
+                @if (isset($event->im_frame))
+                    <div class="mt-4">
+                        {!! $event->im_frame !!}
+                    </div>
+                @endif
+            </div>
+        </div>
+    @endforeach
 
 
     @push('scripts')
@@ -91,11 +75,15 @@
         <script>
             function toggleInfo(index) {
                 var infoDiv = document.getElementById("info" + index);
-                if (infoDiv.style.display === "none") {
-                    infoDiv.style.display = "block";
-                } else {
-                    infoDiv.style.display = "none";
-                }
+                var allInfoDivs = document.querySelectorAll("[id^='info']");
+
+                allInfoDivs.forEach(function(div) {
+                    if (div.id === "info" + index) {
+                        div.classList.toggle("hidden");
+                    } else {
+                        div.classList.add("hidden");
+                    }
+                });
             }
         </script>
     @endpush

@@ -8,7 +8,7 @@
     </style>
 
     <x-slot name="header">
-        <h2 class="font-semibold text-xl  leading-tight" style="color: beige;">
+        <h2 class="font-semibold text-xl  leading-tight" style="color: rgb(6, 6, 5);">
             Términos y condiciones de uso para el sitio web de la Civilización Egipcia.
         </h2>
     </x-slot>
