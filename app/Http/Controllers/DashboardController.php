@@ -36,6 +36,9 @@ class DashboardController extends Controller
     public function adoraciones_divinas()
     {
         $events = TimeLineAdoraciones::showTimeLineAdoraciones();
+        //llamar metodo para validar si ya se creo los items sino que se creen
+        $consulItem = Configurations::generateItemAdoraciones();
+        $itemsCuriosidades = ItemsModules::where('im_modulo', 'Adoraciones')->where('im_user', Auth::user()->id)->get();
         return view('adoraciones_divinas', compact('events'));
     }
 
