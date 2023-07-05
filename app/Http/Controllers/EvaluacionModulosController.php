@@ -9,6 +9,7 @@ use App\Models\Respuestas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\EvaluacionCuriosidades;
+use App\Models\ItemsModules;
 use App\Models\PreguntaAbierta;
 use Illuminate\Support\Facades\Redirect;
 
@@ -163,5 +164,34 @@ class EvaluacionModulosController extends Controller
 
         //colocar mensaje a retornar al contestar en vista principal
         return Redirect::to('dashboard');
+    }
+
+    /**
+     * Funcion que permite cambiar el color de un item y contador de la visitas del mismo
+     *
+     * @author Jhon Freddy Popo Moreno <jhon.popo@correounivalle.edu.co>
+     * @param  $data
+     * @return true
+     */
+    public function actualizarEstado(Request $request)
+    {
+        //guid traido para realizar el cambio
+        $guid = $request->input('guid');
+
+        // Lógica para actualizar el estado en la base de datos utilizando el GUID
+        $change = ItemsModules::where('im_guid', $guid)->first();
+        
+        //trae el total que hay en el momento 
+        $total = $change->im_total_visitas;
+
+        // Incrementar la variable 'total' en uno
+        $total++;
+
+        //cambiar color 
+        $change->im_color = 'bg-red';
+        $change->im_total_visitas = $total;
+        $change->save();
+        
+        return response()->json(['success' => true]);
     }
 }
