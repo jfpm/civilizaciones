@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Configurations;
-use App\Models\TimeLineAdoraciones;
-use App\Models\TimeLineCultura;
-use App\Models\TimeLineCuriosidades;
+use App\Models\ItemsModules;
 use Illuminate\Http\Request;
+use App\Models\Configurations;
+use App\Models\TimeLineCultura;
+use App\Models\TimeLineAdoraciones;
+use App\Models\TimeLineCuriosidades;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -47,7 +49,10 @@ class DashboardController extends Controller
     public function curiosidades()
     {
         $events = TimeLineCuriosidades::showTimeLineCuriosidades();
-        return view('curiosidades', compact('events'));
+        //llamar metodo para validar si ya se creo los items sino que se creen
+        $consulItem = Configurations::generateItemCuriosidades();
+        $itemsCuriosidades = ItemsModules::where('im_modulo', 'Curiosidades')->where('im_user', Auth::user()->id)->get();
+        return view('curiosidades', compact('events','itemsCuriosidades'));
     }
 
     /**

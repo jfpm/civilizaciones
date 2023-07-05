@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('pa_pregunta')->nullable();
             $table->text('pa_respuesta');
-            $table->text('pa_modulo');
+            $table->string('pa_modulo',50);
             $table->integer('pa_user');//usuario responde
             $table->timestamps();
         });
