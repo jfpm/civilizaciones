@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/storeCultura', [EvaluacionModulosController::class, 'storeCultura'])->name('storeCultura');
     Route::get('/evaluacion_adoraciones', [EvaluacionModulosController::class, 'evaluacion_adoraciones'])->name('evaluacion_adoraciones');
     Route::post('/storeAdoraciones', [EvaluacionModulosController::class, 'storeAdoraciones'])->name('storeAdoraciones');
+    Route::post('/actualizarEstado', [EvaluacionModulosController::class, 'actualizarEstado'])->name('actualizarEstado');
 
 });
 
