@@ -67,25 +67,51 @@ class Configurations extends Model
 
         //si no trae registro entonces ingresa y crea
         if (!$validate) {
-            
-            
-            //item agregar para mostrar en la vista
-            $item = ['Culto a los gatos', 'Invención del mortero', 'Momificación'];
 
-            foreach ($item as $value) {
-                //devolver mensaje si existe, para confirmar en el vue
-                $token = strtoupper(substr(Str::uuid()->toString(), 0, 10));
-                
-                ItemsModules::create([
-                    'im_guid' => $token,
-                    'im_modulo' => 'Curiosidades',
-                    'im_color' => 'bg-blue',
-                    'im_item' => $value,
-                    'im_state' => true,
-                    'im_total_visitas' => 0,
-                    'im_user' => Auth::user()->id,
-                ]);
-            }
+            //devolver mensaje si existe, para confirmar en el vue
+            $token = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            ItemsModules::create([
+                'im_guid' => $token,
+                'im_modulo' => 'Curiosidades',
+                'im_color' => 'bg-blue',
+                'im_item' => 'Culto a los gatos',
+                'im_descripcion' => 'En el antiguo Egipto, los gatos eran venerados en gran medida debido a su conexión con la diosa Bastet, la deidad felina asociada con la protección, la fertilidad y la alegría. Bastet, representada con cabeza de leona o gata, era adorada y considerada una diosa benévola que otorgaba prosperidad y salud a aquellos que la honraban adecuadamente.',
+                'im_img' => 'curiosidadesImg/gatos.jpg',
+                'im_video' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/vkWXg_HNUqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+                'im_frame' => '',
+                'im_total_visitas' => 0,
+                'im_user' => Auth::user()->id,
+            ]);
+
+            //devolver mensaje si existe, para confirmar en el vue
+            $token1 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            ItemsModules::create([
+                'im_guid' => $token1,
+                'im_modulo' => 'Curiosidades',
+                'im_color' => 'bg-blue',
+                'im_item' => 'Invención del mortero',
+                'im_descripcion' => 'La invención del mortero en el antiguo Egipto marcó un hito significativo en el desarrollo de la arquitectura y la construcción. El mortero, una mezcla de arena, cal y agua, desempeñó un papel crucial en la creación de los monumentos y las estructuras duraderas por las que los egipcios son conocidos en todo el mundo.',
+                'im_img' => 'curiosidadesImg/gatos.jpg',
+                'im_video' => '<iframe width="560" height="315" src="https://www.youtube.com/embed/rCwuyGgUW6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+                'im_frame' => '',
+                'im_total_visitas' => 0,
+                'im_user' => Auth::user()->id,
+            ]);
+
+            //devolver mensaje si existe, para confirmar en el vue
+            /* $token3 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            ItemsModules::create([
+                'im_guid' => $token3,
+                'im_modulo' => 'Curiosidades',
+                'im_color' => 'bg-blue',
+                'im_item' => 'Momificación',
+                'im_descripcion' => '',
+                'im_img' => '',
+                'im_video' => '',
+                'im_frame' => '',
+                'im_total_visitas' => 0,
+                'im_user' => Auth::user()->id,
+            ]); */
         }
     }
 }

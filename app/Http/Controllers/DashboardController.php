@@ -52,7 +52,7 @@ class DashboardController extends Controller
         //llamar metodo para validar si ya se creo los items sino que se creen
         $consulItem = Configurations::generateItemCuriosidades();
         $itemsCuriosidades = ItemsModules::where('im_modulo', 'Curiosidades')->where('im_user', Auth::user()->id)->get();
-        return view('curiosidades', compact('events'));
+        return view('curiosidades', compact('events','itemsCuriosidades'));
     }
 
     /**

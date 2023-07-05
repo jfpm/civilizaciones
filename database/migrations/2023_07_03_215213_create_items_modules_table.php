@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('im_modulo');//curoisdades - culturales - adoraciones
             $table->string('im_color')->default('bg-blue');//curoisdades - culturales - adoraciones
             $table->string('im_item');
+            $table->text('im_descripcion');
+            $table->text('im_img');
+            $table->text('im_video');
+            $table->text('im_frame');
             $table->boolean('im_state',50)->default(true)->nullable();
             $table->integer('im_total_visitas')->default(0);
             $table->integer('im_user');//usuario responde
