@@ -15,7 +15,7 @@
                 @foreach ($itemsCuriosidades as $index => $event)
                     <div class="bg-white p-4 shadow-md">
                         <a href="#"
-                            class="text-xl font-semibold leading-tight text-gray-800 {{$event->im_color}}-500 hover:bg-{{$event->im_color}}-900 text-white px-4 py-2 rounded-md"
+                            class="text-xl font-semibold leading-tight text-gray-800 {!!$event->im_color!!}-500 hover:{!!$event->im_color!!}-600 text-white px-4 py-2 rounded-md"
                             onclick="toggleInfo(event, '{{ $event->im_guid }}', '{{ $index }}')">{{ $event->im_item }}</a>
                     </div>
                 @endforeach
