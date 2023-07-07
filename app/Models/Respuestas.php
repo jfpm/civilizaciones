@@ -25,6 +25,7 @@ class Respuestas extends Model
         'r_id_pregunta',
         'r_state',
         'r_respuesta',
+        'r_correcta',
     ];
 
     /**
