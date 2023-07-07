@@ -2,13 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TimeLineAdoraciones;
-use App\Models\TimeLineCultura;
-use App\Models\TimeLineCuriosidades;
+use App\Models\ItemsModules;
 use Illuminate\Http\Request;
+use App\Models\Configurations;
+use App\Models\TimeLineCultura;
+use App\Models\TimeLineAdoraciones;
+use App\Models\TimeLineCuriosidades;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
+
+    /**
+     * Funcion que retorna la vista principal del sistema despues de logueado
+     * @author Jhon Freddy Popo Moreno <jhon.popo@correounivalle.edu.co>
+     * @param
+     * @return dashboard
+     */
+    public function index()
+    {
+        $showCuriosidad = Configurations::validateSurvey("Curiosidades");
+        $showAdoracion = Configurations::validateSurvey("Adoraciones");
+        $showCultura = Configurations::validateSurvey("Culturales");
+        return view('dashboard', compact('showCuriosidad','showAdoracion','showCultura'));
+    }
 
     /**
      * Funcion que retorna la vista para ver el contenido de adoraciones divinas
@@ -19,7 +36,10 @@ class DashboardController extends Controller
     public function adoraciones_divinas()
     {
         $events = TimeLineAdoraciones::showTimeLineAdoraciones();
-        return view('adoraciones_divinas', compact('events'));
+        //llamar metodo para validar si ya se creo los items sino que se creen
+        $consulItem = Configurations::generateItemAdoraciones();
+        $itemsAdoraciones = ItemsModules::where('im_modulo', 'Adoraciones')->where('im_user', Auth::user()->id)->get();
+        return view('adoraciones_divinas', compact('events', 'itemsAdoraciones'));
     }
 
 
@@ -32,7 +52,10 @@ class DashboardController extends Controller
     public function curiosidades()
     {
         $events = TimeLineCuriosidades::showTimeLineCuriosidades();
-        return view('curiosidades', compact('events'));
+        //llamar metodo para validar si ya se creo los items sino que se creen
+        $consulItem = Configurations::generateItemCuriosidades();
+        $itemsCuriosidades = ItemsModules::where('im_modulo', 'Curiosidades')->where('im_user', Auth::user()->id)->get();
+        return view('curiosidades', compact('events','itemsCuriosidades'));
     }
 
     /**
