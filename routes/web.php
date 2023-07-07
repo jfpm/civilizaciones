@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EvaluacionModulosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -34,6 +33,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
     Route::get('/cultura', [DashboardController::class, 'cultura'])->name('cultura');
     Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
+
+    //evaluaciones
+    Route::get('/evaluacion_curiosidad', [EvaluacionModulosController::class, 'evaluacion_curiosidad'])->name('evaluacion_curiosidad');
+    Route::post('/storeCuriosidad', [EvaluacionModulosController::class, 'storeCuriosidad'])->name('storeCuriosidad');
+    Route::get('/evaluacion_cultura', [EvaluacionModulosController::class, 'evaluacion_cultura'])->name('evaluacion_cultura');
+    Route::post('/storeCultura', [EvaluacionModulosController::class, 'storeCultura'])->name('storeCultura');
+    Route::get('/evaluacion_adoraciones', [EvaluacionModulosController::class, 'evaluacion_adoraciones'])->name('evaluacion_adoraciones');
+    Route::post('/storeAdoraciones', [EvaluacionModulosController::class, 'storeAdoraciones'])->name('storeAdoraciones');
+    Route::post('/actualizarEstado', [EvaluacionModulosController::class, 'actualizarEstado'])->name('actualizarEstado');
+
 });
 
 Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
