@@ -93,25 +93,81 @@ class Configurations extends Model
                 'im_descripcion' => 'La invención del mortero en el antiguo Egipto marcó un hito significativo en el desarrollo de la arquitectura y la construcción. El mortero, una mezcla de arena, cal y agua, desempeñó un papel crucial en la creación de los monumentos y las estructuras duraderas por las que los egipcios son conocidos en todo el mundo.',
                 'im_img' => 'curiosidadesImg/mortero.jpg',
                 'im_video' => 'https://www.youtube.com/embed/rCwuyGgUW6g',
-                'im_frame' => '',
+                'im_frame' => '<div class="sketchfab-embed-wrapper"> <iframe title="Mortero Lítico" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480" src="https://sketchfab.com/models/7a869b91f321405cb6ceaab09ea892d0/embed?autospin=1&autostart=1"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/mortero-litico-7a869b91f321405cb6ceaab09ea892d0?utm_medium=embed&utm_campaign=share-popup&utm_content=7a869b91f321405cb6ceaab09ea892d0" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Mortero Lítico </a> by <a href="https://sketchfab.com/MinisteriodeCulturaPeru?utm_medium=embed&utm_campaign=share-popup&utm_content=7a869b91f321405cb6ceaab09ea892d0" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Ministerio de Cultura Perú </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7a869b91f321405cb6ceaab09ea892d0" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
             ]);
 
             //devolver mensaje si existe, para confirmar en el vue
-            /* $token3 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            $token2 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            ItemsModules::create([
+                'im_guid' => $token2,
+                'im_modulo' => 'Curiosidades',
+                'im_color' => 'bg-blue',
+                'im_item' => 'Construcción de las pirámides',
+                'im_descripcion' => 'Las pirámides de Giza, como la Gran Pirámide de Keops, son consideradas una de las Siete Maravillas del Mundo Antiguo. Estas enormes estructuras fueron construidas hace más de 4.500 años y siguen siendo un misterio en cuanto a cómo los egipcios antiguos lograron construirlas con tanta precisión sin la tecnología moderna.',
+                'im_img' => 'curiosidadesImg/piramides.jpg',
+                'im_video' => 'https://www.youtube.com/embed/a4NzQzRhK4o',
+                'im_frame' => '',
+                'im_total_visitas' => 0,
+                'im_user' => Auth::user()->id,
+            ]);
+
+            $token3 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
             ItemsModules::create([
                 'im_guid' => $token3,
                 'im_modulo' => 'Curiosidades',
                 'im_color' => 'bg-blue',
-                'im_item' => 'Momificación',
-                'im_descripcion' => '',
-                'im_img' => '',
+                'im_item' => 'Escritura jeroglífica',
+                'im_descripcion' => 'Los antiguos egipcios desarrollaron un sistema de escritura único llamado jeroglíficos. Esta forma de escritura utilizaba una combinación de imágenes y símbolos para representar objetos, conceptos y sonidos. Los jeroglíficos fueron utilizados en monumentos, papiros y templos, y su desciframiento fue uno de los mayores logros de la egiptología.',
+                'im_img' => 'curiosidadesImg/escritura.jpg',
                 'im_video' => '',
+                'im_frame' => '<div class="sketchfab-embed-wrapper"> <iframe title="LINTEL KING AMENHOTEP II - BRITISH MUSEUM 2020" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480" src="https://sketchfab.com/models/264b7917b03d4784a1e137a6f7f15f73/embed?autospin=1&autostart=1"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/lintel-king-amenhotep-ii-british-museum-2020-264b7917b03d4784a1e137a6f7f15f73?utm_medium=embed&utm_campaign=share-popup&utm_content=264b7917b03d4784a1e137a6f7f15f73" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> LINTEL KING AMENHOTEP II - BRITISH MUSEUM 2020 </a> by <a href="https://sketchfab.com/juanbrualla?utm_medium=embed&utm_campaign=share-popup&utm_content=264b7917b03d4784a1e137a6f7f15f73" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Arqueomodel3D </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=264b7917b03d4784a1e137a6f7f15f73" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>',
+                'im_total_visitas' => 0,
+                'im_user' => Auth::user()->id,
+            ]);
+
+            $token4 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            ItemsModules::create([
+                'im_guid' => $token4,
+                'im_modulo' => 'Curiosidades',
+                'im_color' => 'bg-blue',
+                'im_item' => 'Cleopatra',
+                'im_descripcion' => 'Cleopatra VII es una de las figuras más famosas de la antigua civilización egipcia. Fue la última reina de Egipto y es conocida por su belleza y su relación con los líderes romanos Julio César y Marco Antonio. Su historia ha sido inmortalizada en numerosas obras literarias y cinematográficas.',
+                'im_img' => 'cleopatra.jpg',
+                'im_video' => 'https://www.youtube.com/embed/Taodrmelb-8',
+                'im_frame' => 'curiosidadesImg/',
+                'im_total_visitas' => 0,
+                'im_user' => Auth::user()->id,
+            ]);
+
+            $token5 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            ItemsModules::create([
+                'im_guid' => $token5,
+                'im_modulo' => 'Curiosidades',
+                'im_color' => 'bg-blue',
+                'im_item' => 'La importancia del Nilo',
+                'im_descripcion' => 'El río Nilo desempeñó un papel crucial en la vida de los antiguos egipcios. Proporcionaba agua para la agricultura y el riego, y su ciclo de inundaciones anuales era considerado un evento divino que marcaba el comienzo del año egipcio. La fertilidad de las tierras a lo largo del Nilo permitió el desarrollo de una próspera civilización agrícola.',
+                'im_img' => 'curiosidadesImg/rionilo.jpg',
+                'im_video' => 'https://www.youtube.com/embed/b7aIiolnma4',
                 'im_frame' => '',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
-            ]); */
+            ]); 
+
+            $token6 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            ItemsModules::create([
+                'im_guid' => $token6,
+                'im_modulo' => 'Curiosidades',
+                'im_color' => 'bg-blue',
+                'im_item' => 'Medicina egipcia',
+                'im_descripcion' => ' Los egipcios antiguos tenían un conocimiento notable en el campo de la medicina. Desarrollaron tratamientos para una amplia variedad de enfermedades y heridas, utilizando hierbas medicinales, ungüentos y procedimientos quirúrgicos. Los médicos egipcios también realizaron autopsias para comprender mejor la anatomía humana.',
+                'im_img' => '',
+                'im_video' => 'https://www.youtube.com/embed/Fz3NM5nRl3Y',
+                'im_frame' => '',
+                'im_total_visitas' => 0,
+                'im_user' => Auth::user()->id,
+            ]);
         }
     }
 
