@@ -68,8 +68,9 @@ class TimeLineCultura extends Model
                     El pan era el alimento básico en la dieta egipcia. Se elaboraba principalmente con trigo y 
                     cebada, y existían diferentes tipos de panes, como panes redondos, panes planos y panes con semillas.',
                 'photo' => '/imagens_cultura/trigo.png',
-                'video' => '',
-                'iframe' => '<iframe src="https://sketchfab.com/models/d1ae09e3cb8343bc8790b15928452906/embed"></iframe>'
+                'iframe' => '<iframe src="https://sketchfab.com/models/d1ae09e3cb8343bc8790b15928452906/embed"
+                    width="90%"
+                    height="300"></iframe>'
             ],
             [
                 'date' => 'CULTURA - COMERCIO ',

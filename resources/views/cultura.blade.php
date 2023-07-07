@@ -1,10 +1,11 @@
 <x-app-layout>
-
+<div class="py-12" style="background-image: url('/img/fondo_principal.jpg'); background-position: center top; background-repeat: no-repeat; background-size: cover; height:900px">    
     <x-slot name="header">
         
-        <!-- Encabezado de la página -->
     </x-slot>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <div class="container mx-auto">
         <div class="flex flex-col">
@@ -15,12 +16,27 @@
                     $slideIndex = 0; // Variable para almacenar la posición del carrusel
                 @endphp
                 @foreach ($events as $index => $event)
-                    <div
-                        class="py-4 pl-4 pr-6 border-l-2 border-gray-300 flex flex-wrap flex-row ">
+                    <div class="py-4 pl-4 pr-6 border-l-2 border-gray-300 flex flex-wrap flex-row ">
                         <div class="w-full md:w-1/2 pr-2">
-                            <div class="text-gray-600">{{ $event['date'] }}</div>
+                            <div class="font-serif-egyptian text-white">
+                            <div class="font-serif-egyptian text-white"
+                            style="animation: moverTexto 2s infinite;">{{ $event['date'] }}</div>
+                            <style>
+    @keyframes moverTexto {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(20px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+</style>
                             <div class="mt-2 text-xl font-semibold">{{ $event['title'] }}</div>
-                            <div class="mt-1 text-gray-800">{{ $event['description'] }}</div>
+                            <div class="bg-[#0e0e07b8] shadow rounded-lg p-4" >{{ $event['description'] }}</div>
+                            </div>
                         </div>
                         <div class="w-full md:w-1/2 pl-2">
                             @if (isset($event['photo']))
@@ -56,8 +72,8 @@
     </div>
 
 
-    <button class="glider-prev">Anterior</button>
-    <button class="glider-next">Siguiente</button>
+    <button class="glider-prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="glider-next"><i class="fas fa-chevron-right"></i></button>
     
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>

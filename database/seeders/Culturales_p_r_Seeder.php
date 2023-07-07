@@ -34,6 +34,8 @@ class Culturales_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta1->id,
             'r_state' => true,
             'r_respuesta' => 'Pregunta 1',
+            'r_correcta' => 1,
+
         ]);
 
         Respuestas::create([
