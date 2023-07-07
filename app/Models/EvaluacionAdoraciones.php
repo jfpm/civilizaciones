@@ -24,6 +24,7 @@ class EvaluacionAdoraciones extends Model
         'ea_pregunta',
         'ea_respuesta',
         'ea_user',
+        'ea_resultado',
     ];
 
 

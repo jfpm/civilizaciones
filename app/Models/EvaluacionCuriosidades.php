@@ -23,6 +23,7 @@ class EvaluacionCuriosidades extends Model
     protected $fillable = [
         'ec_pregunta',
         'ec_respuesta',
+        'ec_resultado',
         'ec_user',
     ];
 

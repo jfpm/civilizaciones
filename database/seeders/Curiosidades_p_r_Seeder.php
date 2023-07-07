@@ -24,7 +24,7 @@ class Curiosidades_p_r_Seeder extends Seeder
         $pregunta1 = Preguntas::create([
             'p_guid' => $useToken,
             'p_tipo' => 'Curiosidades',
-            'p_pregunta' => 'database/seeders/Curiosidades_p_r_Seeder.php',
+            'p_pregunta' => '¿Qué son las pirámides de Giza?',
             'p_identificador' => 'pregunta_1',
             'p_estate' => true,
         ]);
@@ -34,18 +34,21 @@ class Curiosidades_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta1->id,
             'r_state' => true,
             'r_respuesta' => 'Estructuras de origen egipcio construidas hace más de 4.500 años.',
+            'r_correcta' => 1,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta1->id,
             'r_state' => true,
             'r_respuesta' => 'Una forma de escritura utilizada por los antiguos egipcios.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta1->id,
             'r_state' => true,
             'r_respuesta' => 'Un sistema de medicina desarrollado por los egipcios antiguos.s',
+            'r_correcta' => 0,
         ]);
 
         //traer un token del metodo
@@ -65,24 +68,28 @@ class Curiosidades_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta2->id,
             'r_state' => true,
             'r_respuesta' => 'Jeroglíficos',
+            'r_correcta' => 1,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta2->id,
             'r_state' => true,
             'r_respuesta' => 'Cuneiforme',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta2->id,
             'r_state' => true,
             'r_respuesta' => 'Alfabeto latino.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta2->id,
             'r_state' => true,
             'r_respuesta' => 'Morse',
+            'r_correcta' => 0,
         ]);
 
         //traer un token del metodo
@@ -101,27 +108,30 @@ class Curiosidades_p_r_Seeder extends Seeder
         Respuestas::create([
             'r_id_pregunta' => $pregunta3->id,
             'r_state' => true,
-            'r_respuesta' => 'Gatos',
-        ]);
-
-        Respuestas::create([
-            'r_id_pregunta' => $pregunta3->id,
-            'r_state' => true,
             'r_respuesta' => 'Perros',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta3->id,
             'r_state' => true,
             'r_respuesta' => 'Serpientes',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta3->id,
             'r_state' => true,
             'r_respuesta' => 'Leones',
+            'r_correcta' => 0,
         ]);
 
+        Respuestas::create([
+            'r_id_pregunta' => $pregunta3->id,
+            'r_state' => true,
+            'r_respuesta' => 'Gatos',
+            'r_correcta' => 1,
+        ]);
 
         //traer un token del metodo
         $useToken = Configurations::generateToken();
@@ -139,25 +149,29 @@ class Curiosidades_p_r_Seeder extends Seeder
         Respuestas::create([
             'r_id_pregunta' => $pregunta4->id,
             'r_state' => true,
-            'r_respuesta' => 'Preservar los cuerpos después de la muerte.',
-        ]);
-
-        Respuestas::create([
-            'r_id_pregunta' => $pregunta4->id,
-            'r_state' => true,
             'r_respuesta' => 'Castigar a los criminales.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta4->id,
             'r_state' => true,
             'r_respuesta' => 'Curar enfermedades y heridas.',
+            'r_correcta' => 0,
+        ]);
+
+        Respuestas::create([
+            'r_id_pregunta' => $pregunta4->id,
+            'r_state' => true,
+            'r_respuesta' => 'Preservar los cuerpos después de la muerte.',
+            'r_correcta' => 1,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta4->id,
             'r_state' => true,
             'r_respuesta' => 'Celebrar festividades religiosas.',
+            'r_correcta' => 0,
         ]);
 
         //traer un token del metodo
@@ -172,29 +186,33 @@ class Curiosidades_p_r_Seeder extends Seeder
             'p_estate' => true,
         ]);
 
-        //respuesta a la pregunta
+        //respuesta a la pregunta  
         Respuestas::create([
             'r_id_pregunta' => $pregunta5->id,
             'r_state' => true,
-            'r_respuesta' => 'La última reina de Egipto.',
+            'r_respuesta' => 'Una diosa adorada por los antiguos egipcios.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta5->id,
             'r_state' => true,
-            'r_respuesta' => 'Una diosa adorada por los antiguos egipcios.',
+            'r_respuesta' => 'La última reina de Egipto.',
+            'r_correcta' => 1,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta5->id,
             'r_state' => true,
             'r_respuesta' => 'Una famosa escritora egipcia.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta5->id,
             'r_state' => true,
             'r_respuesta' => 'La inventora de la medicina egipcia.',
+            'r_correcta' => 0,
         ]);
 
         //traer un token del metodo
@@ -214,24 +232,28 @@ class Curiosidades_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta6->id,
             'r_state' => true,
             'r_respuesta' => 'Proporcionaba agua para la agricultura y el riego.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta6->id,
             'r_state' => true,
             'r_respuesta' => 'Era un símbolo de poder divino.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta6->id,
             'r_state' => true,
             'r_respuesta' => 'Era utilizado para la navegación y el comercio.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta6->id,
             'r_state' => true,
             'r_respuesta' => 'Todas las anteriores.',
+            'r_correcta' => 1,
         ]);
 
         //traer un token del metodo
@@ -251,24 +273,28 @@ class Curiosidades_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta7->id,
             'r_state' => true,
             'r_respuesta' => 'Desarrollaron tratamientos para diversas enfermedades y heridas.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta7->id,
             'r_state' => true,
             'r_respuesta' => 'Utilizaban hierbas medicinales y ungüentos.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta7->id,
             'r_state' => true,
             'r_respuesta' => 'Realizaban procedimientos quirúrgicos.',
+            'r_correcta' => 0,
         ]);
 
         Respuestas::create([
             'r_id_pregunta' => $pregunta7->id,
             'r_state' => true,
             'r_respuesta' => 'Todas las anteriores.',
+            'r_correcta' => 1,
         ]);
 
 

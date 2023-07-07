@@ -73,11 +73,11 @@ class Configurations extends Model
             ItemsModules::create([
                 'im_guid' => $token,
                 'im_modulo' => 'Curiosidades',
-                'im_color' => 'bg-blue',
+                'im_color' => 'bg-blue-500',
                 'im_item' => 'Culto a los gatos',
                 'im_descripcion' => 'En el antiguo Egipto, los gatos eran venerados en gran medida debido a su conexión con la diosa Bastet, la deidad felina asociada con la protección, la fertilidad y la alegría. Bastet, representada con cabeza de leona o gata, era adorada y considerada una diosa benévola que otorgaba prosperidad y salud a aquellos que la honraban adecuadamente.',
                 'im_img' => 'curiosidadesImg/gatos.jpg',
-                'im_video' => 'https://www.youtube.com/embed/vkWXg_HNUqc',
+                'im_video' => 'https://www.youtube.com/embed/5uIaFHeUCkE',
                 'im_frame' => '',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
@@ -88,7 +88,7 @@ class Configurations extends Model
             ItemsModules::create([
                 'im_guid' => $token1,
                 'im_modulo' => 'Curiosidades',
-                'im_color' => 'bg-blue',
+                'im_color' => 'bg-blue-500',
                 'im_item' => 'Invención del mortero',
                 'im_descripcion' => 'La invención del mortero en el antiguo Egipto marcó un hito significativo en el desarrollo de la arquitectura y la construcción. El mortero, una mezcla de arena, cal y agua, desempeñó un papel crucial en la creación de los monumentos y las estructuras duraderas por las que los egipcios son conocidos en todo el mundo.',
                 'im_img' => 'curiosidadesImg/mortero.jpg',
@@ -103,7 +103,7 @@ class Configurations extends Model
             ItemsModules::create([
                 'im_guid' => $token2,
                 'im_modulo' => 'Curiosidades',
-                'im_color' => 'bg-blue',
+                'im_color' => 'bg-blue-500',
                 'im_item' => 'Construcción de las pirámides',
                 'im_descripcion' => 'Las pirámides de Giza, como la Gran Pirámide de Keops, son consideradas una de las Siete Maravillas del Mundo Antiguo. Estas enormes estructuras fueron construidas hace más de 4.500 años y siguen siendo un misterio en cuanto a cómo los egipcios antiguos lograron construirlas con tanta precisión sin la tecnología moderna.',
                 'im_img' => 'curiosidadesImg/piramides.jpg',
@@ -117,7 +117,7 @@ class Configurations extends Model
             ItemsModules::create([
                 'im_guid' => $token3,
                 'im_modulo' => 'Curiosidades',
-                'im_color' => 'bg-blue',
+                'im_color' => 'bg-blue-500',
                 'im_item' => 'Escritura jeroglífica',
                 'im_descripcion' => 'Los antiguos egipcios desarrollaron un sistema de escritura único llamado jeroglíficos. Esta forma de escritura utilizaba una combinación de imágenes y símbolos para representar objetos, conceptos y sonidos. Los jeroglíficos fueron utilizados en monumentos, papiros y templos, y su desciframiento fue uno de los mayores logros de la egiptología.',
                 'im_img' => 'curiosidadesImg/escritura.jpg',
@@ -131,7 +131,7 @@ class Configurations extends Model
             ItemsModules::create([
                 'im_guid' => $token4,
                 'im_modulo' => 'Curiosidades',
-                'im_color' => 'bg-blue',
+                'im_color' => 'bg-blue-500',
                 'im_item' => 'Cleopatra',
                 'im_descripcion' => 'Cleopatra VII es una de las figuras más famosas de la antigua civilización egipcia. Fue la última reina de Egipto y es conocida por su belleza y su relación con los líderes romanos Julio César y Marco Antonio. Su historia ha sido inmortalizada en numerosas obras literarias y cinematográficas.',
                 'im_img' => 'cleopatra.jpg',
@@ -145,7 +145,7 @@ class Configurations extends Model
             ItemsModules::create([
                 'im_guid' => $token5,
                 'im_modulo' => 'Curiosidades',
-                'im_color' => 'bg-blue',
+                'im_color' => 'bg-blue-500',
                 'im_item' => 'La importancia del Nilo',
                 'im_descripcion' => 'El río Nilo desempeñó un papel crucial en la vida de los antiguos egipcios. Proporcionaba agua para la agricultura y el riego, y su ciclo de inundaciones anuales era considerado un evento divino que marcaba el comienzo del año egipcio. La fertilidad de las tierras a lo largo del Nilo permitió el desarrollo de una próspera civilización agrícola.',
                 'im_img' => 'curiosidadesImg/rionilo.jpg',
@@ -159,7 +159,7 @@ class Configurations extends Model
             ItemsModules::create([
                 'im_guid' => $token6,
                 'im_modulo' => 'Curiosidades',
-                'im_color' => 'bg-blue',
+                'im_color' => 'bg-blue-500',
                 'im_item' => 'Medicina egipcia',
                 'im_descripcion' => ' Los egipcios antiguos tenían un conocimiento notable en el campo de la medicina. Desarrollaron tratamientos para una amplia variedad de enfermedades y heridas, utilizando hierbas medicinales, ungüentos y procedimientos quirúrgicos. Los médicos egipcios también realizaron autopsias para comprender mejor la anatomía humana.',
                 'im_img' => '',

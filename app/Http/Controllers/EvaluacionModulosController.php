@@ -56,6 +56,7 @@ class EvaluacionModulosController extends Controller
             EvaluacionCuriosidades::create([
                 'ec_pregunta' => $pregunta->p_pregunta,
                 'ec_respuesta' => $respuesta->r_respuesta,
+                'ec_resultado' => $respuesta->r_correcta,
                 'ec_user' => Auth::user()->id
             ]);
         }
@@ -112,6 +113,7 @@ class EvaluacionModulosController extends Controller
             EvaluacionCultura::create([
                 'ecl_pregunta' => $pregunta->p_pregunta,
                 'ecl_respuesta' => $respuesta->r_respuesta,
+                'ecl_resultado' => $respuesta->r_correcta,
                 'ecl_user' => Auth::user()->id
             ]);
         }
@@ -158,6 +160,7 @@ class EvaluacionModulosController extends Controller
             EvaluacionAdoraciones::create([
                 'ea_pregunta' => $pregunta->p_pregunta,
                 'ea_respuesta' => $respuesta->r_respuesta,
+                'ea_resultado' => $respuesta->r_correcta,
                 'ea_user' => Auth::user()->id
             ]);
         }
@@ -188,7 +191,7 @@ class EvaluacionModulosController extends Controller
         $total++;
 
         //cambiar color 
-        $change->im_color = 'bg-red';
+        $change->im_color = 'bg-red-600';
         $change->im_total_visitas = $total;
         $change->save();
         
