@@ -2,13 +2,13 @@
 
 use App\Providers\RouteServiceProvider;
 
-test('registration screen can be rendered', function () {
+test('Mostrar pantalla de registro', function () {
     $response = $this->get('/register');
 
     $response->assertStatus(200);
 });
 
-test('new users can register', function () {
+test('Nuevo usuario registrado en el sistema', function () {
     $response = $this->post('/register', [
         'name' => 'Test User',
         'email' => 'jhon.popo@correounivalle.edu.co',
