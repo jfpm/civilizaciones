@@ -13,7 +13,7 @@ class TimeLineCultura extends Model
     {
         $events = [
             [
-                'date' => '',
+                'date' => 'CULTURA - GASTRONOMIA',
                 'title' => 'GASTRONOMIA',
                 'description' => 'La gastronomía en el antiguo Egipto era rica y diversa, 
                     reflejando la abundancia de ingredientes disponibles en la región. Los egipcios 
@@ -43,8 +43,8 @@ class TimeLineCultura extends Model
                 </div>'
             ],
             [
-                'date' => 'Gastronomia',
-                'title' => 'Pescado',
+                'date' => 'CULTURA - GASTRONOMIA',
+                'title' => 'PESCADO',
                 'description' => 'El pescado era una parte importante 
                     de la gastronomía en el antiguo Egipto debido a la ubicación 
                     geográfica del país, que le proporcionaba acceso a ríos como 
@@ -60,8 +60,8 @@ class TimeLineCultura extends Model
                 
             ],
             [
-                'date' => '',
-                'title' => 'Cultivo de alimentos',
+                'date' => 'CULTURA - GASTRONOMIA',
+                'title' => 'CULTIVO DE ALIMENTOS',
                 'description' => 'La civilización egipcia se desarrolló en las orillas del río Nilo,
                     lo que proporcionaba suelos fértiles para el cultivo de una amplia variedad de alimentos.
                     Los egipcios cultivaban trigo, cebada, lentejas, hortalizas, dátiles, uvas y otros frutos.
@@ -72,7 +72,7 @@ class TimeLineCultura extends Model
                 'iframe' => '<iframe src="https://sketchfab.com/models/d1ae09e3cb8343bc8790b15928452906/embed"></iframe>'
             ],
             [
-                'date' => '',
+                'date' => 'CULTURA - COMERCIO ',
                 'title' => 'COMERCIO',
                 'description' => 'El comercio en el antiguo Egipto fue una parte vital de su economía y sociedad. 
                     Los egipcios establecieron rutas comerciales terrestres y marítimas para intercambiar una amplia 
@@ -91,7 +91,7 @@ class TimeLineCultura extends Model
             ],
 
             [
-                'date' => '',
+                'date' => 'CULTURA -SOCIAL',
                 'title' => 'JERARQUIA SOCIAL',
                 'description' => 'La jerarquía social en el antiguo Egipto estaba estructurada de 
                     forma piramidal, reflejando la organización de la sociedad. En la cúspide se 
@@ -123,7 +123,7 @@ class TimeLineCultura extends Model
             ],
 
             [
-                'date' => 'JERARQUIA SOCIAL',
+                'date' => 'CULTURA - SOCIAL',
                 'title' => '',
                 'description' => ' En este emocionante video, exploraremos las 
                 fascinantes clases sociales de la antigua civilización egipcia. 
