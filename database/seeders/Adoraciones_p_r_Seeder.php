@@ -40,6 +40,7 @@ class Adoraciones_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta1->id,
             'r_state' => true,
             'r_respuesta' => '5500 a.C. hasta el 3100 a.C',
+            'r_correcta' => 1,
         ]);
 
         Respuestas::create([
@@ -78,6 +79,7 @@ class Adoraciones_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta2->id,
             'r_state' => true,
             'r_respuesta' => 'Osiris',
+            'r_correcta' => 1,
         ]);
 
         Respuestas::create([
@@ -121,6 +123,7 @@ class Adoraciones_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta3->id,
             'r_state' => true,
             'r_respuesta' => 'Amón',
+            'r_correcta' => 1,
         ]);
 
 
@@ -153,6 +156,7 @@ class Adoraciones_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta4->id,
             'r_state' => true,
             'r_respuesta' => 'Anubis',
+            'r_correcta' => 1,
         ]);
 
          //traer un token del metodo
@@ -190,6 +194,7 @@ class Adoraciones_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta5->id,
             'r_state' => true,
             'r_respuesta' => 'El cocodrilo',
+            'r_correcta' => 1,
         ]);
 
          //traer un token del metodo
@@ -227,6 +232,7 @@ class Adoraciones_p_r_Seeder extends Seeder
             'r_id_pregunta' => $pregunta6->id,
             'r_state' => true,
             'r_respuesta' => 'Ninguna de las anteriores',
+            'r_correcta' => 1,
         ]);
     }
 }
