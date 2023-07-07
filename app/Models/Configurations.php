@@ -127,47 +127,47 @@ class Configurations extends Model
                 'im_user' => Auth::user()->id,
             ]);
 
-            /* $token3 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            $token4 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
             ItemsModules::create([
-                'im_guid' => $token3,
+                'im_guid' => $token4,
                 'im_modulo' => 'Curiosidades',
                 'im_color' => 'bg-blue',
-                'im_item' => 'Momificación',
-                'im_descripcion' => '',
-                'im_img' => '',
-                'im_video' => '',
-                'im_frame' => '',
+                'im_item' => 'Cleopatra',
+                'im_descripcion' => 'Cleopatra VII es una de las figuras más famosas de la antigua civilización egipcia. Fue la última reina de Egipto y es conocida por su belleza y su relación con los líderes romanos Julio César y Marco Antonio. Su historia ha sido inmortalizada en numerosas obras literarias y cinematográficas.',
+                'im_img' => 'cleopatra.jpg',
+                'im_video' => 'https://www.youtube.com/embed/Taodrmelb-8',
+                'im_frame' => 'curiosidadesImg/',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
-            ]); */
+            ]);
 
-            /* $token3 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            $token5 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
             ItemsModules::create([
-                'im_guid' => $token3,
+                'im_guid' => $token5,
                 'im_modulo' => 'Curiosidades',
                 'im_color' => 'bg-blue',
-                'im_item' => 'Momificación',
-                'im_descripcion' => '',
-                'im_img' => '',
-                'im_video' => '',
+                'im_item' => 'La importancia del Nilo',
+                'im_descripcion' => 'El río Nilo desempeñó un papel crucial en la vida de los antiguos egipcios. Proporcionaba agua para la agricultura y el riego, y su ciclo de inundaciones anuales era considerado un evento divino que marcaba el comienzo del año egipcio. La fertilidad de las tierras a lo largo del Nilo permitió el desarrollo de una próspera civilización agrícola.',
+                'im_img' => 'curiosidadesImg/rionilo.jpg',
+                'im_video' => 'https://www.youtube.com/embed/b7aIiolnma4',
                 'im_frame' => '',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
-            ]); */
+            ]); 
 
-            /* $token3 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
+            $token6 = strtoupper(substr(Str::uuid()->toString(), 0, 10));
             ItemsModules::create([
-                'im_guid' => $token3,
+                'im_guid' => $token6,
                 'im_modulo' => 'Curiosidades',
                 'im_color' => 'bg-blue',
-                'im_item' => 'Momificación',
-                'im_descripcion' => '',
+                'im_item' => 'Medicina egipcia',
+                'im_descripcion' => ' Los egipcios antiguos tenían un conocimiento notable en el campo de la medicina. Desarrollaron tratamientos para una amplia variedad de enfermedades y heridas, utilizando hierbas medicinales, ungüentos y procedimientos quirúrgicos. Los médicos egipcios también realizaron autopsias para comprender mejor la anatomía humana.',
                 'im_img' => '',
-                'im_video' => '',
+                'im_video' => 'https://www.youtube.com/embed/Fz3NM5nRl3Y',
                 'im_frame' => '',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
-            ]); */
+            ]);
         }
     }
 
