@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('r_id_pregunta');
             $table->boolean('r_state',50)->default(true)->nullable();
             $table->string('r_respuesta');
+            $table->integer('r_correcta')->default(0)->nullable();
             $table->timestamps();
 
             //llave foranea a la tabla preguntas

@@ -17,11 +17,11 @@ class UserSeeder extends Seeder
     public function run()
     {
         //Crear el Usuario Administrador en el sistema
-        $password = 'adminadmin123';
+        $password = 'demodemo';
 
         $user = User::create([
             'name' => 'Administrador',
-            'email' => 'telloyilver@gmail.com',
+            'email' => 'proyectouni2017@gmail.com',
             'password' => Hash::make($password),
             'username' => 'Admin',
             'rol'      => 1,
