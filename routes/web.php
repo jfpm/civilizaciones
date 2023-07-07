@@ -43,6 +43,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/storeAdoraciones', [EvaluacionModulosController::class, 'storeAdoraciones'])->name('storeAdoraciones');
     Route::post('/actualizarEstado', [EvaluacionModulosController::class, 'actualizarEstado'])->name('actualizarEstado');
 
+    //ver evaluaciones
+    Route::get('/ver_evaluacion_curiosidad', [EvaluacionModulosController::class, 'ver_evaluacion_curiosidad'])->name('ver_evaluacion_curiosidad');
+    Route::get('/ver_evaluacion_cultura', [EvaluacionModulosController::class, 'ver_evaluacion_cultura'])->name('ver_evaluacion_cultura');
+    Route::get('/ver_evaluacion_adoraciones', [EvaluacionModulosController::class, 'ver_evaluacion_adoraciones'])->name('ver_evaluacion_adoraciones');
 });
 
 Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');

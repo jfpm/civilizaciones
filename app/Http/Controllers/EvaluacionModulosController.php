@@ -194,4 +194,16 @@ class EvaluacionModulosController extends Controller
         
         return response()->json(['success' => true]);
     }
+
+    public function ver_evaluacion_curiosidad(){
+        return view('evaluaciones.showCuriosidades');
+    }
+
+    public function ver_evaluacion_cultura(){
+        return view('evaluaciones.showCultura');
+    }
+
+    public function ver_evaluacion_adoraciones(){
+        return view('evaluaciones.showAdoraciones');
+    }
 }
