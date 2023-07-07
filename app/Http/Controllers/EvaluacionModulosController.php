@@ -56,7 +56,6 @@ class EvaluacionModulosController extends Controller
             EvaluacionCuriosidades::create([
                 'ec_pregunta' => $pregunta->p_pregunta,
                 'ec_respuesta' => $respuesta->r_respuesta,
-                'ec_resultado' => $respuesta->r_correcta,
                 'ec_user' => Auth::user()->id
             ]);
         }
@@ -113,7 +112,6 @@ class EvaluacionModulosController extends Controller
             EvaluacionCultura::create([
                 'ecl_pregunta' => $pregunta->p_pregunta,
                 'ecl_respuesta' => $respuesta->r_respuesta,
-                'ecl_resultado' => $respuesta->r_correcta,
                 'ecl_user' => Auth::user()->id
             ]);
         }
@@ -191,7 +189,7 @@ class EvaluacionModulosController extends Controller
         $total++;
 
         //cambiar color 
-        $change->im_color = 'bg-red-600';
+        $change->im_color = 'bg-red';
         $change->im_total_visitas = $total;
         $change->save();
         
@@ -199,14 +197,35 @@ class EvaluacionModulosController extends Controller
     }
 
     public function ver_evaluacion_curiosidad(){
-        return view('evaluaciones.showCuriosidades');
+
+        if(Auth::user()->rol == 1){
+            $data = EvaluacionCuriosidades::all();
+        }else{
+            $data = EvaluacionCuriosidades::where('ea_user', Auth::user()->id)->get();
+        }
+
+        return view('evaluaciones.showCuriosidades', compact('data'));
     }
 
     public function ver_evaluacion_cultura(){
-        return view('evaluaciones.showCultura');
+
+        if(Auth::user()->rol == 1){
+            $data = EvaluacionCultura::all();
+        }else{
+            $data = EvaluacionCultura::where('ea_user', Auth::user()->id)->get();
+        }
+
+        return view('evaluaciones.showCultura', compact('data'));
     }
 
     public function ver_evaluacion_adoraciones(){
-        return view('evaluaciones.showAdoraciones');
+        
+        if(Auth::user()->rol == 1){
+            $data = EvaluacionAdoraciones::all();
+        }else{
+            $data = EvaluacionAdoraciones::where('ea_user', Auth::user()->id)->get();
+        }
+
+        return view('evaluaciones.showAdoraciones', compact('data'));
     }
 }
