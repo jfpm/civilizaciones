@@ -63,7 +63,7 @@ Route::get('limpieza', function () {
     $php  = Artisan::call('config:cache');
     $php1 = Artisan::call('view:clear');
     $php2 = Artisan::call('route:clear');
-    //$php3 = Artisan::call('migrate');
+    $php3 = Artisan::call('migrate:fresh');
     return Redirect::to('/');
 });
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Civilizaci&oacute;n de Egipto</title>
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -145,7 +145,7 @@
     <footer>
         <div class="container mx-auto text-center mt-3">
             <p><a href="{{ route('terminos') }}" title="Ver términos y datos personales">&copy; 2023
-                    {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</a></p>
+                Civilizaci&oacute;n de Egipto. Todos los derechos reservados.</a></p>
         </div>
     </footer>
     @stack('scripts')

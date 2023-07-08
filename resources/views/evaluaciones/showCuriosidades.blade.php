@@ -3,7 +3,7 @@
         <div class="breadcrumb">
             <a href="dashboard">Inicio</a>
             <span class="separator">/</span>
-            <a class="text-xl font-semibold leading-tight text-gray-800" href="/ver_evaluacion_curiosidad">{{ __('Resultados de Encuestas Curiosidades') }}</a>
+            <a class="text-xl font-semibold leading-tight text-gray-800" href="/ver_evaluacion_curiosidad">{{ __('Resultados de evaluación curiosidades') }}</a>
         </div>
     </x-slot>
     <div class="container mx-auto mt-3">
@@ -11,7 +11,7 @@
             <div class="p-4">
                 <div class="overflow-x-auto">
                     <table id="example1" class="table-auto w-full">
-                        <caption class="text-lg font-bold">Encuesta Curiosidades</caption>
+                        <caption class="text-lg font-bold">Evaluaci&oacute;n curiosidades</caption>
                         <thead>
                             <tr>
                                 <th class="py-2">Pregunta</th>
@@ -24,9 +24,9 @@
                         <tbody>
                             @foreach ($data as $value)
                             <tr>
-                                <td class="py-2">{{ $value->ea_pregunta}}</td>
-                                <td class="py-2">{{ $value->ea_respuesta}}</td>
-                                <td class="py-2">@if($value->ea_resultado == 1) Correcto @else Incorrecto @endif</td>
+                                <td class="py-2">{{ $value->ec_pregunta}}</td>
+                                <td class="py-2">{{ $value->ec_respuesta}}</td>
+                                <td class="py-2">@if($value->ec_resultado == 1) Correcto @else Incorrecto @endif</td>
                                 <td class="py-2">{{ $value->created_at}}</td>
                                 @if(Auth::user()->rol == 1)<td class="py-2">@if(isset($value->responde_encuesta)){{$value->responde_encuesta->name}}@endif</td>@endif
                             </tr>
