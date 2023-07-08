@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make($password),
             'username' => 'Admin',
             'rol'      => 1,
+            'registration_token' => Str::uuid(),
         ]); 
     }
 }
