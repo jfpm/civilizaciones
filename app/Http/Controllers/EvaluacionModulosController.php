@@ -190,7 +190,7 @@ class EvaluacionModulosController extends Controller
         $total++;
 
         //cambiar color 
-        $change->im_color = 'bg-red';
+        $change->im_color = 'bg-red-500';
         $change->im_total_visitas = $total;
         $change->save();
         
