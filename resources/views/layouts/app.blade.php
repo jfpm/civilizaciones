@@ -17,6 +17,7 @@
     <!--CSS DataTables-->
     <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <!-- Scripts -->
+    <link rel="stylesheet" href="{{ asset('/toastr/toastr.min.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/usuarios.css'])
 
     <style>
@@ -151,7 +152,7 @@
 </body>
 <a id="goToTopButton" href="#" title="Ir hacia arriba" class="fixed bottom-4 right-4 text-white text-xl bg-blue-500 p-2 rounded-full" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></a>
 </html>
-
+<script src="{{ asset('/toastr/toastr.min.js') }}"></script>
 <script>
     window.addEventListener('scroll', function() {
         var goToTopButton = document.getElementById('goToTopButton');

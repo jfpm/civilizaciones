@@ -28,6 +28,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
+    Route::post('/usuarios_delete/{id}', [AdminController::class, 'delete'])->name('usuario.delete');
+    Route::get('/usuarios_editar/{id}', [AdminController::class, 'editar'])->name('usuario.editar');
+    Route::post('update_usuarios/{id}', [AdminController::class, 'update'])->name('usuario.update');
+    
     //modulos principales
     Route::get('/adoraciones_divinas', [DashboardController::class, 'adoraciones_divinas'])->name('adoraciones_divinas');
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
