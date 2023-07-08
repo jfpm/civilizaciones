@@ -4,9 +4,8 @@
         
     </x-slot>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-
+    
     <div class="container mx-auto">
         <div class="flex flex-col">
             <div class="border-l-2 border-gray-300">
@@ -22,18 +21,18 @@
                             <div class="font-serif-egyptian text-white"
                             style="animation: moverTexto 2s infinite;">{{ $event['date'] }}</div>
                             <style>
-    @keyframes moverTexto {
-        0% {
-            transform: translateX(0);
-        }
-        50% {
-            transform: translateX(20px);
-        }
-        100% {
-            transform: translateX(0);
-        }
-    }
-</style>
+                                @keyframes moverTexto {
+                                    0% {
+                                        transform: translateX(0);
+                                    }
+                                    50% {
+                                        transform: translateX(20px);
+                                    }
+                                    100% {
+                                        transform: translateX(0);
+                                    }
+                                }
+                            </style>
                             <div class="mt-2 text-xl font-semibold">{{ $event['title'] }}</div>
                             <div class="bg-[#0e0e07b8] shadow rounded-lg p-4" >{{ $event['description'] }}</div>
                             </div>
@@ -70,11 +69,11 @@
             </div>
         </div>
     </div>
-
-
-    <button class="glider-prev"><i class="fas fa-chevron-left"></i></button>
-    <button class="glider-next"><i class="fas fa-chevron-right"></i></button>
     
+    <button class="glider-prev glider-button-gold">&#9664;</button>
+    <button class="glider-next glider-button-gold">&#9654;</button>
+    
+
 
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <script>

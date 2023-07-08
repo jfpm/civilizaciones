@@ -24,9 +24,9 @@
                         <tbody>
                             @foreach ($data as $value)
                             <tr>
-                                <td class="py-2">{{ $value->ea_pregunta}}</td>
-                                <td class="py-2">{{ $value->ea_respuesta}}</td>
-                                <td class="py-2">@if($value->ea_resultado == 1) Correcto @else Incorrecto @endif</td>
+                                <td class="py-2">{{ $value->ecl_pregunta}}</td>
+                                <td class="py-2">{{ $value->ecl_respuesta}}</td>
+                                <td class="py-2">@if($value->ecl_resultado == 1) Correcto @else Incorrecto @endif</td>
                                 <td class="py-2">{{ $value->created_at}}</td>
                                 @if(Auth::user()->rol == 1)<td class="py-2">@if(isset($value->responde_encuesta)){{$value->responde_encuesta->name}}@endif</td>@endif
                             </tr>
