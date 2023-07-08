@@ -33,5 +33,7 @@ class DashboardTest extends TestCase
         // Realiza las aserciones necesarias
         $response->assertStatus(200);
         $response->assertSee($user->name); // Asegura que el nombre del usuario se muestre en la vista
+
+        //ejecutar un solo test php artisan test --filter DashboardTest
     }
 }

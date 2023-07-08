@@ -27,12 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
+    Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
     //modulos principales
     Route::get('/adoraciones_divinas', [DashboardController::class, 'adoraciones_divinas'])->name('adoraciones_divinas');
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
     Route::get('/cultura', [DashboardController::class, 'cultura'])->name('cultura');
-    Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
 
     //evaluaciones
     Route::get('/evaluacion_curiosidad', [EvaluacionModulosController::class, 'evaluacion_curiosidad'])->name('evaluacion_curiosidad');
@@ -45,7 +44,8 @@ Route::middleware('auth')->group(function () {
 
 });
 
-Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
+
+Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
 
 
 Route::get('limpieza', function () {
