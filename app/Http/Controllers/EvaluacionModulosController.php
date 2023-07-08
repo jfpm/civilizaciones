@@ -112,6 +112,7 @@ class EvaluacionModulosController extends Controller
             EvaluacionCultura::create([
                 'ecl_pregunta' => $pregunta->p_pregunta,
                 'ecl_respuesta' => $respuesta->r_respuesta,
+                'ecl_resultado' => $respuesta->r_correcta,
                 'ecl_user' => Auth::user()->id
             ]);
         }

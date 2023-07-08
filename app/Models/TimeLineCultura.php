@@ -68,8 +68,9 @@ class TimeLineCultura extends Model
                     El pan era el alimento básico en la dieta egipcia. Se elaboraba principalmente con trigo y 
                     cebada, y existían diferentes tipos de panes, como panes redondos, panes planos y panes con semillas.',
                 'photo' => '/imagens_cultura/trigo.png',
-                'video' => '',
-                'iframe' => '<iframe src="https://sketchfab.com/models/d1ae09e3cb8343bc8790b15928452906/embed"></iframe>'
+                'iframe' => '<iframe src="https://sketchfab.com/models/d1ae09e3cb8343bc8790b15928452906/embed"
+                    width="90%"
+                    height="300"></iframe>'
             ],
             [
                 'date' => 'CULTURA - COMERCIO ',
@@ -124,11 +125,39 @@ class TimeLineCultura extends Model
 
             [
                 'date' => 'CULTURA - SOCIAL',
+                'title' => 'LOS EXCLAVOS',
+                'description' => ' 
+                Los esclavos en el antiguo Egipto generalmente eran propiedad de individuos 
+                o instituciones, como los templos y los palacios. Realizaban trabajos forzados 
+                en diferentes sectores, como en la agricultura, la construcción, el hogar o como
+                sirvientes personales.
+                Los esclavos en el antiguo Egipto desempeñaban un papel crucial en la sociedad 
+                y la economía. Eran personas capturadas en batallas, prisioneros de deudas o 
+                nacidos en esclavitud. Aunque ocupaban el escalón más bajo de la jerarquía social,
+                 su trabajo forzado era fundamental para la construcción de monumentos, la producción
+                  agrícola y los hogares de las clases altas. Aunque carecían de derechos y eran 
+                  considerados propiedad, algunos esclavos podían ascender socialmente si demostraban 
+                  habilidades destacadas. ',
+                'photo' => '/imagens_cultura/exclavos.png',
+                'video' => '',
+                'iframe' => '></iframe>'
+                
+                
+            ],
+
+            [
+                'date' => 'CULTURA - SOCIAL',
                 'title' => '',
                 'description' => ' En este emocionante video, exploraremos las 
                 fascinantes clases sociales de la antigua civilización egipcia. 
                 Sumérgete en el esplendor del antiguo Egipto mientras descubrimos 
                 cómo se estructuraba y organizaba su sociedad.
+
+                Los esclavos en el antiguo Egipto generalmente eran propiedad de individuos 
+                o instituciones, como los templos y los palacios. Realizaban trabajos forzados 
+                en diferentes sectores, como en la agricultura, la construcción, el hogar o como
+                sirvientes personales.
+
 
                 Acompáñanos en un viaje a través del tiempo mientras desentrañamos las jerarquías y estratos sociales que caracterizaron a esta enigmática civilizació',
                 'video' => 'https://www.youtube.com/embed/Hsy3AxUHsH0',
