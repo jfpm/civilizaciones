@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('ec_pregunta')->nullable();
             $table->text('ec_respuesta');
+            $table->integer('ec_resultado')->default(0)->nullable();
             $table->integer('ec_user');//usuario responde
             $table->timestamps();
         });

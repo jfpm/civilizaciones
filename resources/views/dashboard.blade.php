@@ -42,7 +42,7 @@
                     </div>
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
                         <img class="w-full h-40 object-contain rounded-full mb-4" src="{{ asset('img/sarcofago.png') }}"
-                            alt="Miembro del equipo 3" onmouseover="openModal('modal3')">
+                            alt="Miembro del equipo 3">
                         <h3 class="text-white text-xl font-bold text-center">Cultura</h3>
                         <a href="{{ route('cultura') }}"
                             class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>

@@ -112,6 +112,7 @@ class EvaluacionModulosController extends Controller
             EvaluacionCultura::create([
                 'ecl_pregunta' => $pregunta->p_pregunta,
                 'ecl_respuesta' => $respuesta->r_respuesta,
+                'ecl_resultado' => $respuesta->r_correcta,
                 'ecl_user' => Auth::user()->id
             ]);
         }
@@ -158,6 +159,7 @@ class EvaluacionModulosController extends Controller
             EvaluacionAdoraciones::create([
                 'ea_pregunta' => $pregunta->p_pregunta,
                 'ea_respuesta' => $respuesta->r_respuesta,
+                'ea_resultado' => $respuesta->r_correcta,
                 'ea_user' => Auth::user()->id
             ]);
         }
@@ -193,5 +195,38 @@ class EvaluacionModulosController extends Controller
         $change->save();
         
         return response()->json(['success' => true]);
+    }
+
+    public function ver_evaluacion_curiosidad(){
+
+        if(Auth::user()->rol == 1){
+            $data = EvaluacionCuriosidades::all();
+        }else{
+            $data = EvaluacionCuriosidades::where('ea_user', Auth::user()->id)->get();
+        }
+
+        return view('evaluaciones.showCuriosidades', compact('data'));
+    }
+
+    public function ver_evaluacion_cultura(){
+
+        if(Auth::user()->rol == 1){
+            $data = EvaluacionCultura::all();
+        }else{
+            $data = EvaluacionCultura::where('ea_user', Auth::user()->id)->get();
+        }
+
+        return view('evaluaciones.showCultura', compact('data'));
+    }
+
+    public function ver_evaluacion_adoraciones(){
+        
+        if(Auth::user()->rol == 1){
+            $data = EvaluacionAdoraciones::all();
+        }else{
+            $data = EvaluacionAdoraciones::where('ea_user', Auth::user()->id)->get();
+        }
+
+        return view('evaluaciones.showAdoraciones', compact('data'));
     }
 }

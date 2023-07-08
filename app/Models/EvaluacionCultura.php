@@ -23,6 +23,7 @@ class EvaluacionCultura extends Model
     protected $fillable = [
         'ecl_pregunta',
         'ecl_respuesta',
+        'ecl_resultado',
         'ecl_user',
     ];
 

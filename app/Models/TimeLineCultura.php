@@ -13,7 +13,7 @@ class TimeLineCultura extends Model
     {
         $events = [
             [
-                'date' => '',
+                'date' => 'CULTURA - GASTRONOMIA',
                 'title' => 'GASTRONOMIA',
                 'description' => 'La gastronomía en el antiguo Egipto era rica y diversa, 
                     reflejando la abundancia de ingredientes disponibles en la región. Los egipcios 
@@ -43,8 +43,8 @@ class TimeLineCultura extends Model
                 </div>'
             ],
             [
-                'date' => 'Gastronomia',
-                'title' => 'Pescado',
+                'date' => 'CULTURA - GASTRONOMIA',
+                'title' => 'PESCADO',
                 'description' => 'El pescado era una parte importante 
                     de la gastronomía en el antiguo Egipto debido a la ubicación 
                     geográfica del país, que le proporcionaba acceso a ríos como 
@@ -60,19 +60,20 @@ class TimeLineCultura extends Model
                 
             ],
             [
-                'date' => '',
-                'title' => 'Cultivo de alimentos',
+                'date' => 'CULTURA - GASTRONOMIA',
+                'title' => 'CULTIVO DE ALIMENTOS',
                 'description' => 'La civilización egipcia se desarrolló en las orillas del río Nilo,
                     lo que proporcionaba suelos fértiles para el cultivo de una amplia variedad de alimentos.
                     Los egipcios cultivaban trigo, cebada, lentejas, hortalizas, dátiles, uvas y otros frutos.
                     El pan era el alimento básico en la dieta egipcia. Se elaboraba principalmente con trigo y 
                     cebada, y existían diferentes tipos de panes, como panes redondos, panes planos y panes con semillas.',
                 'photo' => '/imagens_cultura/trigo.png',
-                'video' => '',
-                'iframe' => '<iframe src="https://sketchfab.com/models/d1ae09e3cb8343bc8790b15928452906/embed"></iframe>'
+                'iframe' => '<iframe src="https://sketchfab.com/models/d1ae09e3cb8343bc8790b15928452906/embed"
+                    width="90%"
+                    height="300"></iframe>'
             ],
             [
-                'date' => '',
+                'date' => 'CULTURA - COMERCIO ',
                 'title' => 'COMERCIO',
                 'description' => 'El comercio en el antiguo Egipto fue una parte vital de su economía y sociedad. 
                     Los egipcios establecieron rutas comerciales terrestres y marítimas para intercambiar una amplia 
@@ -91,7 +92,7 @@ class TimeLineCultura extends Model
             ],
 
             [
-                'date' => '',
+                'date' => 'CULTURA -SOCIAL',
                 'title' => 'JERARQUIA SOCIAL',
                 'description' => 'La jerarquía social en el antiguo Egipto estaba estructurada de 
                     forma piramidal, reflejando la organización de la sociedad. En la cúspide se 
@@ -123,12 +124,40 @@ class TimeLineCultura extends Model
             ],
 
             [
-                'date' => 'JERARQUIA SOCIAL',
+                'date' => 'CULTURA - SOCIAL',
+                'title' => 'LOS EXCLAVOS',
+                'description' => ' 
+                Los esclavos en el antiguo Egipto generalmente eran propiedad de individuos 
+                o instituciones, como los templos y los palacios. Realizaban trabajos forzados 
+                en diferentes sectores, como en la agricultura, la construcción, el hogar o como
+                sirvientes personales.
+                Los esclavos en el antiguo Egipto desempeñaban un papel crucial en la sociedad 
+                y la economía. Eran personas capturadas en batallas, prisioneros de deudas o 
+                nacidos en esclavitud. Aunque ocupaban el escalón más bajo de la jerarquía social,
+                 su trabajo forzado era fundamental para la construcción de monumentos, la producción
+                  agrícola y los hogares de las clases altas. Aunque carecían de derechos y eran 
+                  considerados propiedad, algunos esclavos podían ascender socialmente si demostraban 
+                  habilidades destacadas. ',
+                'photo' => '/imagens_cultura/exclavos.png',
+                'video' => '',
+                'iframe' => '></iframe>'
+                
+                
+            ],
+
+            [
+                'date' => 'CULTURA - SOCIAL',
                 'title' => '',
                 'description' => ' En este emocionante video, exploraremos las 
                 fascinantes clases sociales de la antigua civilización egipcia. 
                 Sumérgete en el esplendor del antiguo Egipto mientras descubrimos 
                 cómo se estructuraba y organizaba su sociedad.
+
+                Los esclavos en el antiguo Egipto generalmente eran propiedad de individuos 
+                o instituciones, como los templos y los palacios. Realizaban trabajos forzados 
+                en diferentes sectores, como en la agricultura, la construcción, el hogar o como
+                sirvientes personales.
+
 
                 Acompáñanos en un viaje a través del tiempo mientras desentrañamos las jerarquías y estratos sociales que caracterizaron a esta enigmática civilizació',
                 'video' => 'https://www.youtube.com/embed/Hsy3AxUHsH0',
