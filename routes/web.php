@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/usuarios_delete/{id}', [AdminController::class, 'delete'])->name('usuario.delete');
     Route::get('/usuarios_editar/{id}', [AdminController::class, 'editar'])->name('usuario.editar');
     Route::post('update_usuarios/{id}', [AdminController::class, 'update'])->name('usuario.update');
-    
+
     //modulos principales
     Route::get('/adoraciones_divinas', [DashboardController::class, 'adoraciones_divinas'])->name('adoraciones_divinas');
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
@@ -55,22 +55,19 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
-
-
 Route::get('limpieza', function () {
     //$php = Artisan::call('up');
     $php  = Artisan::call('config:cache');
     $php1 = Artisan::call('view:clear');
     $php2 = Artisan::call('route:clear');
-    $php3 = Artisan::call('migrate:fresh');
+    //$php3 = Artisan::call('migrate:fresh');
     return Redirect::to('/');
 });
 
 Route::get('3jecut4rbds_f@j@l@', function () {
     //$php = Artisan::call('up');
-    $php   = Artisan::call('db:seed');
-    return redirect()->route('/');
+    //$php   = Artisan::call('db:seed');
+    return redirect()->route('/dashboard');
 });
 
 //limpiar aplicacion por medio de crobs interno
@@ -78,7 +75,7 @@ Route::get('cr34rcache', function () {
     //$php = Artisan::call('up');
     $php   = Artisan::call('config:cache');
     $php1  = Artisan::call('view:cache');
-    return redirect()->route('/');
+    return redirect()->route('/dashboard');
 });
 
 //limpiar aplicacion por medio de crobs interno
@@ -86,13 +83,13 @@ Route::get('4ctu4l1z4r', function () {
     $php   = Artisan::call('optimize:clear');
     $php1  = Artisan::call('config:cache');
     $php2  = Artisan::call('view:cache');
-    return redirect()->route('/');
+    return redirect()->route('/dashboard');
 });
 
 Route::get('3jecut4rkey_f@j@l@', function () {
     //$php = Artisan::call('up');
     $php   = Artisan::call('key:generate');
-    return redirect()->route('/');
+    return redirect()->route('/dashboard');
 });
 
 

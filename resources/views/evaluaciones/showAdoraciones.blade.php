@@ -11,7 +11,7 @@
             <div class="p-4">
                 <div class="overflow-x-auto">
                     <table id="example1" class="table-auto w-full">
-                        <caption class="text-lg font-bold">Evaluaci&oacute; adoraciones divinas</caption>
+                        <caption class="text-lg font-bold">Evaluaci&oacute;n adoraciones divinas</caption>
                         <thead>
                             <tr>
                                 <th class="py-2">Pregunta</th>
@@ -35,6 +35,6 @@
                     </table>
                 </div>
             </div>
-        </div>       
+        </div>
     </div>
 </x-app-layout>
