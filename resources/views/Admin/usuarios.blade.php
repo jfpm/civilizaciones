@@ -1,8 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Listado de usuarios del sistema') }}
-        </h2>
+        <div class="breadcrumb">
+            <a href="dashboard">Inicio</a>
+            <span class="separator">/</span>
+            <a class="text-xl font-semibold leading-tight text-gray-800" href="/usuarios">{{ __('Listado de usuarios del sistema') }}</a>
+        </div>
     </x-slot>
     <div class="container mx-auto mt-3">
         <div class="bg-white shadow-lg rounded-lg overflow-hidden">

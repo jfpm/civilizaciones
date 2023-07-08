@@ -3,7 +3,7 @@
         <div class="breadcrumb">
             <a href="dashboard">Inicio</a>
             <span class="separator">/</span>
-            <a class="text-xl font-semibold leading-tight text-gray-800" href="/ver_evaluacion_cultura">{{ __('Resultados de Encuestas Cultura') }}</a>
+            <a class="text-xl font-semibold leading-tight text-gray-800" href="/ver_evaluacion_cultura">{{ __('Evaluación de encuestas cultura') }}</a>
         </div>
     </x-slot>
     <div class="container mx-auto mt-3">
@@ -11,7 +11,7 @@
             <div class="p-4">
                 <div class="overflow-x-auto">
                     <table id="example1" class="table-auto w-full">
-                        <caption class="text-lg font-bold">Encuesta Cultura</caption>
+                        <caption class="text-lg font-bold">Resultado evalauaci&oacute;n cultura</caption>
                         <thead>
                             <tr>
                                 <th class="py-2">Pregunta</th>

@@ -134,9 +134,9 @@ class Configurations extends Model
                 'im_color' => 'bg-blue-500',
                 'im_item' => 'Cleopatra',
                 'im_descripcion' => 'Cleopatra VII es una de las figuras más famosas de la antigua civilización egipcia. Fue la última reina de Egipto y es conocida por su belleza y su relación con los líderes romanos Julio César y Marco Antonio. Su historia ha sido inmortalizada en numerosas obras literarias y cinematográficas.',
-                'im_img' => 'cleopatra.jpg',
+                'im_img' => 'curiosidadesImg/cleopatra.jpg',
                 'im_video' => 'https://www.youtube.com/embed/Taodrmelb-8',
-                'im_frame' => 'curiosidadesImg/',
+                'im_frame' => '',
                 'im_total_visitas' => 0,
                 'im_user' => Auth::user()->id,
             ]);

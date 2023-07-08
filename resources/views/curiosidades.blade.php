@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    @foreach ($itemsCuriosidades as $index => $event)
+    {{-- @foreach ($itemsCuriosidades as $index => $event)
         <div id="info{{ $index }}" class="mt-4 hidden">
             <div class="bg-white border border-gray-200 rounded-lg p-6">
                 <h2 class="text-xl font-semibold leading-tight text-gray-800">{{ $event->im_item }}</h2>
@@ -49,7 +49,40 @@
                 @endif
             </div>
         </div>
-    @endforeach
+    @endforeach --}}
+
+    @foreach ($itemsCuriosidades as $index => $event)
+    <div id="info{{ $index }}" class="mt-4 hidden">
+        <div class="flex flex-wrap">
+            <h2 class="text-xl font-semibold leading-tight text-gray-800">{{ $event->im_item }}</h2>
+            <p>{{ $event->im_descripcion }}</p>
+            @if (isset($event->im_img) && $event->im_img != '')
+            <div class="w-full md:w-1/2">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-center items-center">
+                        <img src="{{ asset($event->im_img) }}" alt="{{ $event->im_item }}" style="height: 480px !important;" class="max-w-full">
+                    </div>
+                </div>
+            </div>
+            @endif
+            @if (isset($event->im_video) & $event->im_video != '')
+            <div class="w-full md:w-1/2">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <iframe width="100%" height="480" src="{{ $event->im_video }}" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            @endif
+            @if (isset($event->im_frame) & $event->im_frame != '')
+            <div class="w-full md:w-1/2">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    {!! $event->im_frame !!}
+                </div>
+            </div>
+            @endif
+        </div>
+    </div>
+@endforeach
 
     @push('scripts')
         <!-- Swiper JS -->
