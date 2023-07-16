@@ -54,6 +54,12 @@
                         </x-slot>
                     </x-dropdown>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link  class="dark:text-gray-500" :href="route('contactenos')" :active="request()->routeIs('contactenos')">
+                        {{ __('Contactenos') }}
+                    </x-nav-link>
+                </div>
+
 
 
 
@@ -136,6 +142,10 @@
 
             <x-responsive-nav-link :href="route('ver_evaluacion_cultura')">
                 {{ __('Resultado Cultura') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('contactenos')">
+                {{ __('Contactenos') }}
             </x-responsive-nav-link>
         </div>
 
