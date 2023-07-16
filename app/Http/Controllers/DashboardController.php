@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\ItemsModules;
 use Illuminate\Http\Request;
 use App\Models\Configurations;
+use App\Models\Contactenos;
 use App\Models\TimeLineCultura;
 use App\Models\TimeLineAdoraciones;
 use App\Models\TimeLineCuriosidades;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DNS;
 
 class DashboardController extends Controller
 {
@@ -80,5 +83,53 @@ class DashboardController extends Controller
     public function terminos()
     {
         return view('terminos');
+    }
+
+    /**
+     * Funcion que retorna la vista contactenos
+     * @author Jhon Freddy Popo Moreno <jhon.popo@correounivalle.edu.co>
+     * @param
+     * @return cultura
+     */
+    public function contactenos()
+    {
+        return view('contactenos');
+    }
+
+    /**
+     * Funcion que retorna la vista para ver modulo de contactenos
+     * @author Jhon Freddy Popo Moreno <jhon.popo@correounivalle.edu.co>
+     * @param
+     * @return contactenos
+     */
+    public function sendContactForm(Request $request)
+    {
+        // Validación de campos del formulario
+        $request->validate([
+            'name' => 'required',
+            'email' => [
+                'required',
+                'email',
+                function ($attribute, $value, $fail) {
+                    [$user, $domain] = explode('@', $value);
+                    if (!checkdnsrr($domain, 'MX')) {
+                        $fail('El correo electrónico no tiene un dominio DNS válido.');
+                    }
+                },
+            ],
+            'message' => 'required',
+        ]);
+
+        // Lógica para enviar el correo o guardar los datos en la base de datos, por ejemplo
+        // ...
+        Contactenos::create([
+            'email' => $request['email'],
+            'name' => $request['name'],
+            'description' => $request['message'],
+            'guid' => Str::uuid(),
+        ]);
+
+        // Redireccionar al usuario después de enviar el formulario
+        return redirect()->back()->with('status', '¡Gracias por contactarnos!');
     }
 }

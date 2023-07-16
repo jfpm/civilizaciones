@@ -41,6 +41,10 @@ class EvaluacionModulosController extends Controller
     public function storeCuriosidad(Request $request)
     {
         //dd($request['response']);
+        $request->validate([
+            'response' => 'required',
+            'answeropen' => 'required',
+        ]);
 
         /*  crear metodo para recorrer los id que llegaron del formulario y sacar con el id
         *   Nombre de la pregunta con el id de la foranea
@@ -59,6 +63,8 @@ class EvaluacionModulosController extends Controller
                 'ec_user' => Auth::user()->id
             ]);
         }
+
+
 
         //almacenar respuesta abierta
         PreguntaAbierta::create([
@@ -182,18 +188,18 @@ class EvaluacionModulosController extends Controller
 
         // Lógica para actualizar el estado en la base de datos utilizando el GUID
         $change = ItemsModules::where('im_guid', $guid)->first();
-        
-        //trae el total que hay en el momento 
+
+        //trae el total que hay en el momento
         $total = $change->im_total_visitas;
 
         // Incrementar la variable 'total' en uno
         $total++;
 
-        //cambiar color 
-        $change->im_color = 'bg-red';
+        //cambiar color
+        $change->im_color = 'bg-red-500';
         $change->im_total_visitas = $total;
         $change->save();
-        
+
         return response()->json(['success' => true]);
     }
 
@@ -220,7 +226,7 @@ class EvaluacionModulosController extends Controller
     }
 
     public function ver_evaluacion_adoraciones(){
-        
+
         if(Auth::user()->rol == 1){
             $data = EvaluacionAdoraciones::all();
         }else{

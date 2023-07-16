@@ -3,7 +3,7 @@
         <div class="breadcrumb">
             <a href="dashboard">Inicio</a>
             <span class="separator">/</span>
-            <a class="text-xl font-semibold leading-tight text-gray-800" href="/ver_evaluacion_adoraciones">{{ __('Resultados de Encuestas Adoraciones') }}</a>
+            <a class="text-xl font-semibold leading-tight text-gray-800" href="/ver_evaluacion_adoraciones">{{ __('Resultados de evaluaciones adoraciones') }}</a>
         </div>
     </x-slot>
     <div class="container mx-auto mt-3">
@@ -11,7 +11,7 @@
             <div class="p-4">
                 <div class="overflow-x-auto">
                     <table id="example1" class="table-auto w-full">
-                        <caption class="text-lg font-bold">Encuesta Adoraciones Divinas</caption>
+                        <caption class="text-lg font-bold">Evaluaci&oacute;n adoraciones divinas</caption>
                         <thead>
                             <tr>
                                 <th class="py-2">Pregunta</th>
@@ -35,6 +35,6 @@
                     </table>
                 </div>
             </div>
-        </div>       
+        </div>
     </div>
 </x-app-layout>

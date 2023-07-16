@@ -9,7 +9,7 @@
                 <div class="mx-auto max-w-2xl sm:text-center">
                     <h1
                         class="text-3xl font-bold tracking-tight text-white text-grey-500 sm:text-5xl font-serif-egyptian">
-                        {!! config('app.name', 'Laravel') !!}</h1> <br><br>
+                        Civilizaci&oacute;n de Egipto</h1> <br><br>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-[#0e0e07b8] shadow rounded-lg p-4">
@@ -19,10 +19,10 @@
                         <a href="{{ route('adoraciones_divinas') }}"
                             class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
                         <p class="font-serif-egyptian text-white">Explorar los fascinantes aspectos de los faraones,
-                            dioses y animales sagrados en la antigua civilización egipcia.</p>
+                            dioses y animales sagrados en la antigua civilización egipcia.</p><br>
                         @if (!$showAdoracion)
                             <a href="evaluacion_adoraciones" class="underline text-white">
-                                <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                                <h3 style="font-family: Georgia, serif;" class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
                             </a>
                         @endif
                     </div>
@@ -33,10 +33,10 @@
                         <a href="{{ route('curiosidades') }}"
                             class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
                         <p class="font-serif-egyptian text-white">Sumergete en los fascinantes aspectos de la
-                            civilización egipcia que han cautivado a lo largo de los siglos.</p>
+                            civilización egipcia que han cautivado a lo largo de los siglos.</p><br>
                         @if (!$showCuriosidad)
                             <a href="evaluacion_curiosidad" class="underline text-white">
-                                <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                                <h3 style="font-family: Georgia, serif;" class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
                             </a>
                         @endif
                     </div>
@@ -47,10 +47,10 @@
                         <a href="{{ route('cultura') }}"
                             class="bg-gold-light hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded my-3 w-full block text-center">Ingresar</a>
                         <p class="font-serif-egyptian text-white mb-5">Aborda los diversos aspectos que conformaron la
-                            vida cotidiana de la antigua civilización egipcia.</p>
+                            vida cotidiana de la antigua civilización egipcia.</p> <br>
                         @if (!$showCultura)
                             <a href="evaluacion_cultura" class="underline text-white">
-                                <h3 class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
+                                <h3 style="font-family: Georgia, serif;" class="text-white text-xl font-bold text-center">Evalúa tu conocimiento</h3>
                             </a>
                         @endif
                     </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Civilizaci&oacute;n de Egipto</title>
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -17,6 +17,7 @@
     <!--CSS DataTables-->
     <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <!-- Scripts -->
+    <link rel="stylesheet" href="{{ asset('/toastr/toastr.min.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/usuarios.css'])
 
     <style>
@@ -144,14 +145,14 @@
     <footer>
         <div class="container mx-auto text-center mt-3">
             <p><a href="{{ route('terminos') }}" title="Ver términos y datos personales">&copy; 2023
-                    {{ config('app.name', 'Laravel') }}. Todos los derechos reservados.</a></p>
+                Civilizaci&oacute;n de Egipto. Todos los derechos reservados.</a></p>
         </div>
     </footer>
     @stack('scripts')
 </body>
 <a id="goToTopButton" href="#" title="Ir hacia arriba" class="fixed bottom-4 right-4 text-white text-xl bg-blue-500 p-2 rounded-full" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></a>
 </html>
-
+<script src="{{ asset('/toastr/toastr.min.js') }}"></script>
 <script>
     window.addEventListener('scroll', function() {
         var goToTopButton = document.getElementById('goToTopButton');

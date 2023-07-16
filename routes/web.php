@@ -27,12 +27,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
+    Route::post('/usuarios_delete/{id}', [AdminController::class, 'delete'])->name('usuario.delete');
+    Route::get('/usuarios_editar/{id}', [AdminController::class, 'editar'])->name('usuario.editar');
+    Route::post('update_usuarios/{id}', [AdminController::class, 'update'])->name('usuario.update');
 
     //modulos principales
     Route::get('/adoraciones_divinas', [DashboardController::class, 'adoraciones_divinas'])->name('adoraciones_divinas');
     Route::get('/curiosidades', [DashboardController::class, 'curiosidades'])->name('curiosidades');
     Route::get('/cultura', [DashboardController::class, 'cultura'])->name('cultura');
-    Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
 
     //evaluaciones
     Route::get('/evaluacion_curiosidad', [EvaluacionModulosController::class, 'evaluacion_curiosidad'])->name('evaluacion_curiosidad');
@@ -47,9 +50,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/ver_evaluacion_curiosidad', [EvaluacionModulosController::class, 'ver_evaluacion_curiosidad'])->name('ver_evaluacion_curiosidad');
     Route::get('/ver_evaluacion_cultura', [EvaluacionModulosController::class, 'ver_evaluacion_cultura'])->name('ver_evaluacion_cultura');
     Route::get('/ver_evaluacion_adoraciones', [EvaluacionModulosController::class, 'ver_evaluacion_adoraciones'])->name('ver_evaluacion_adoraciones');
-});
 
-Route::get('/usuarios', [AdminController::class, 'usuarios'])->name('usuarios');
+    Route::get('/terminos', [DashboardController::class, 'terminos'])->name('terminos');
+    Route::get('/contactenos', [DashboardController::class, 'contactenos'])->name('contactenos');
+    Route::post('/storecontactenos', [DashboardController::class, 'sendContactForm'])->name('storecontactenos');
+});
 
 
 Route::get('limpieza', function () {
@@ -57,36 +62,36 @@ Route::get('limpieza', function () {
     $php  = Artisan::call('config:cache');
     $php1 = Artisan::call('view:clear');
     $php2 = Artisan::call('route:clear');
-    //$php3 = Artisan::call('migrate');
+    //$php3 = Artisan::call('migrate:fresh');
     return Redirect::to('/');
 });
 
-Route::get('3jecut4rbds_f@j@l@', function(){
+Route::get('3jecut4rbds_f@j@l@', function () {
     //$php = Artisan::call('up');
-    $php   = Artisan::call('db:seed');
-    return redirect()->route('/');
+    //$php   = Artisan::call('db:seed');
+    return Redirect::to('/');
 });
 
 //limpiar aplicacion por medio de crobs interno
-Route::get('cr34rcache', function(){
+Route::get('cr34rcache', function () {
     //$php = Artisan::call('up');
     $php   = Artisan::call('config:cache');
     $php1  = Artisan::call('view:cache');
-    return redirect()->route('/');
+    return Redirect::to('/');
 });
 
 //limpiar aplicacion por medio de crobs interno
-Route::get('4ctu4l1z4r', function(){
+Route::get('4ctu4l1z4r', function () {
     $php   = Artisan::call('optimize:clear');
     $php1  = Artisan::call('config:cache');
     $php2  = Artisan::call('view:cache');
-    return redirect()->route('/');
+    return Redirect::to('/');
 });
 
-Route::get('3jecut4rkey_f@j@l@', function(){
+Route::get('3jecut4rkey_f@j@l@', function () {
     //$php = Artisan::call('up');
     $php   = Artisan::call('key:generate');
-    return redirect()->route('/');
+    return Redirect::to('/');
 });
 
 

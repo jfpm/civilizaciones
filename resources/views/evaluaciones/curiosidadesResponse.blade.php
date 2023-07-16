@@ -31,7 +31,10 @@
 
                         <div class="mb-4">
                             <label for="answeropen" class="block mb-2">Dejanos tus comentarios sobre curiosidades:</label>
-                            <input type="text" name="answeropen" id="answeropen" class="border-gray-400 border rounded-md px-4 py-2 w-full">
+                            <input type="text" value="{{ old('answeropen') }}" name="answeropen" id="answeropen" class="border-gray-400 border rounded-md px-4 py-2 w-full" required autofocus>
+                            @error('answeropen')
+                                <span class="text-red-500 text-xs mt-1">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <!-- Botón de envío -->
